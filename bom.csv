@@ -1,0 +1,15 @@
+item,qty,unit_cost_inr,source,notes
+DS51150 servo (elbow),1,2539,robu.in,"Price seen on Robu listing, was out of stock; 65x30x48 mm; ear/horn hole pattern unconfirmed"
+Wrist servo (optional),1,,,Model undecided; hinged wrist module is optional
+Muscle BioAmp Candy board,,,Upside Down Labs,Quantity depends on electrode count (undecided)
+NPG Lite,1,,Upside Down Labs,Check the Fallen module rule
+Steel conductive thread (electrodes),,,,Length depends on electrode layout
+Tight swim shirt (sleeve),1,,,Right arm only
+Velcro strap 25 mm,,,,For saddle plates / chest plate
+M4 heat-set inserts,,,,Strut mounts and servo ears; count when design is final
+M4 screws,,,,Count when design is final
+M5 bolts and nyloc nuts,,,,Wrist pivot and shoulder pivot; count when design is final
+22 mm e-stop pushbutton,1,,,Mounted in the electronics tray lid
+Power supply or battery (servo),1,,,Must supply 7.4-12.6 V and the stall current of the DS51150
+Fuse and wiring,,,,Sized to the supply
+PLA/PETG filament,,,,Bambu Lab A1 printing
