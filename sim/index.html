@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aegis elbow physics sim</title>
+<title>Aegis arm + chest support physics sim</title>
 <style>
   :root { --bg:#0e1116; --panel:#161b22; --line:#2a313c; --text:#e6edf3; --dim:#8b949e; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --acc:#58a6ff; }
   * { box-sizing:border-box; }
@@ -37,7 +37,7 @@
     <canvas id="graph" width="680" height="380"></canvas>
   </div>
   <div id="side">
-    <h1>Aegis elbow: physics sim</h1>
+    <h1>Aegis arm + chest support: physics sim</h1>
     <div class="sub">Right arm. Angle 0° = arm hanging straight, flexion lifts the hand. Placeholder geometry and assumed numbers: see "Assumptions" below.</div>
 
     <h2>Command</h2>
@@ -69,6 +69,40 @@
     <label>Wrist to fingertip <span class="v" id="v-lh"></span></label>
     <input type="range" id="lh" min="140" max="230" step="5" value="195">
 
+    <h2>Wrist (hinged hand module)</h2>
+    <label>Show wrist module <input type="checkbox" id="wristOn" checked></label>
+    <label>Show hand + arm reference <input type="checkbox" id="limbs" checked></label>
+    <label>Wrist target (− = palm-ward) <span class="v" id="v-wt"></span></label>
+    <input type="range" id="wt" min="-55" max="45" step="1" value="0">
+    <div class="row"><button id="b-wsweep">Sweep wrist</button></div>
+    <label>Wrist servo class (assumed) <select id="wstall"><option value="10">10 kg·cm</option><option value="20" selected>20 kg·cm</option><option value="25">25 kg·cm</option></select></label>
+    <label>Wrist torque limit <span class="v" id="v-wlim"></span></label>
+    <input type="range" id="wlim" min="10" max="100" step="5" value="80">
+    <label>Wrist max speed <span class="v" id="v-wvmax"></span></label>
+    <input type="range" id="wvmax" min="60" max="800" step="10" value="400">
+    <table>
+      <tr><td>Wrist angle</td><td id="w-ang"></td></tr>
+      <tr><td>Torque needed to hold</td><td id="w-need"></td></tr>
+      <tr><td>Servo torque available (limit)</td><td id="w-avail"></td></tr>
+      <tr><td>Holding margin</td><td id="w-margin"></td></tr>
+      <tr><td>Torque now</td><td id="w-now"></td></tr>
+      <tr><td>Linkage ratio (crank : hand)</td><td id="w-ratio"></td></tr>
+      <tr><td>Stop</td><td id="w-stop"></td></tr>
+    </table>
+
+    <h2>Shoulder pose (chest support)</h2>
+    <label>Shoulder flexion (strut pivot) <span class="v" id="v-sho"></span></label>
+    <input type="range" id="sho" min="-40" max="120" step="1" value="0">
+    <label>Upper-arm roll (rail) <span class="v" id="v-roll"></span></label>
+    <input type="range" id="roll" min="-32" max="32" step="1" value="0">
+    <div class="note" style="margin:2px 0 6px">Roll slides the saddle's curved rail through the strut's carriage. Full carriage engagement to about ±25°; at ±32° the carriage rides on half its length.</div>
+    <label>Abduction (yoke pin) <span class="v" id="v-abd"></span></label>
+    <input type="range" id="abd" min="0" max="60" step="1" value="0">
+    <label>Upper exo + arm share (assumed) <span class="v" id="v-mu"></span></label>
+    <input type="range" id="mu" min="0.3" max="2.0" step="0.1" value="0.8">
+    <label>Show chest support <input type="checkbox" id="chest" checked></label>
+    <label>Show torso reference <input type="checkbox" id="torso" checked></label>
+
     <h2>Live readout</h2>
     <table>
       <tr><td>Torque needed to hold here</td><td id="r-need"></td></tr>
@@ -90,6 +124,8 @@
       <tr><td>Moment at the chest foot (arm 120 mm)</td><td id="c-M"></td></tr>
       <tr><td>Shear per foot bolt (4 × M4)</td><td id="c-V"></td></tr>
       <tr><td>Pull-out per foot bolt (worst)</td><td id="c-T"></td></tr>
+      <tr><td>Shoulder torque you must hold</td><td id="c-S"></td></tr>
+      <tr><td></td><td id="c-Sd" style="color:var(--dim)"></td></tr>
     </table>
     <div class="note">The elbow torque does not go to the chest: it is an internal force pair across the elbow. The chest link carries the exo's weight and the share of the payload that passes through it.</div>
 
