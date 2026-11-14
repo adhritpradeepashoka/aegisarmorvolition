@@ -4,21 +4,22 @@
 
 Hack Club **Fallen** submission by Adhrit Pradeep (Hack Club: adhrit2012).
 
-A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight shirt sleeve, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
+A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
 > **Status: early. Nothing here is a finished or tested design yet.**
 > TODO (Adhrit): replace this paragraph with your own description of what you are building and why.
 
 ## What it is and how to use it
 
-- **Black Carapace** is a tight sleeve with steel-thread electrodes. Muscle BioAmp Candy boards turn the muscle signal into a voltage the controller can read.
+- **Black Carapace** is a tight full-sleeved shirt with steel-thread electrodes. Muscle BioAmp Candy boards turn the muscle signal into a voltage the controller can read.
 - **Aegis** is a one-arm servo exoskeleton: a DSSERVO DS51150 at the elbow (optional wrist joint), Velcro straps instead of rigid cuffs, mechanical end stops, and a chest support that links the arm to a chest plate.
 - **To look at it:** open the interactive simulator (enable GitHub Pages, then visit `/sim/`). Drag the target angle, load the arm, change the supply voltage and torque limit, show or hide the wrist and the chest support, and press *Kill (e-stop)*.
+- **Garment status:** the garment is not built yet. The plan (4 Candy boards on the chest plate, steel-thread electrode traces running all the way to the chest plate, to be tested on both a sleeve and a full-sleeved shirt) is in `docs/garment.md`.
 - **To read the parts:** `full-size-v15/` holds the 3D files, `docs/wiring.md` the wiring.
 
 ## Why I made it
 
-TODO (Adhrit): write this in your own words. Facts from your notes you can use: this is your dream project for Hack Club Fallen (Maker Faire Shenzhen, 11 to 14 December 2026); the sleeve is meant to feed EMG into the Volition signal-processing software.
+I have a passion for brain-computer interfaces and I'm a fan of Warhammer 40k, to some extent. I always wanted a flexible interface suit that could assist me. I had the idea for a while, and when Fallen came up I decided to use the opportunity to at least design and implement it.
 
 ## Screenshots
 
