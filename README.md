@@ -1,3 +1,5 @@
+> **Note:** `test-files/` is the old v12 set. Current parts are in `full-size-v15/` (generator in `generator/`).
+
 # Aegis Armor (Black Carapace + Aegis)
 
 Hack Club **Fallen** submission by Adhrit Pradeep (Hack Club: adhrit2012).
