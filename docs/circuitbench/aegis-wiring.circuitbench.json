@@ -1,0 +1,261 @@
+{
+ "format": "virtual-lab",
+ "version": "0.1",
+ "libraries": {
+  "@wokwi/elements": "1.9.2",
+  "avr8js": "0.21.1"
+ },
+ "parts": [
+  {
+   "id": "pico-1",
+   "type": "raspberry-pi-pico",
+   "x": 400,
+   "y": 40,
+   "rotate": 0
+  },
+  {
+   "id": "signal-f572s",
+   "type": "custom-signal-source",
+   "x": 680,
+   "y": 260,
+   "rotate": 0,
+   "signal": "ecg",
+   "bpm": 70,
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0,
+   "attached": 1,
+   "sp": "",
+   "sn": "",
+   "sr": ""
+  },
+  {
+   "id": "bioamp-cypfd",
+   "type": "custom-bioamp-exg-pill",
+   "x": 640,
+   "y": 80,
+   "rotate": 0,
+   "sp": "",
+   "sn": "",
+   "sr": "",
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0
+  },
+  {
+   "id": "ser-8y7ey",
+   "type": "servo",
+   "x": 90,
+   "y": 40,
+   "rotate": 0
+  },
+  {
+   "id": "bat-cvowd",
+   "type": "battery",
+   "x": 80,
+   "y": 260,
+   "rotate": 0,
+   "volts": 5
+  },
+  {
+   "id": "sli-u1q9w",
+   "type": "slide-switch",
+   "x": 230,
+   "y": 300,
+   "rotate": 0,
+   "pos": 0
+  }
+ ],
+ "wires": [
+  {
+   "id": "w-bperq",
+   "from": {
+    "part": "signal-f572s",
+    "pin": "E+"
+   },
+   "to": {
+    "part": "bioamp-cypfd",
+    "pin": "IN+"
+   },
+   "style": "orthogonal",
+   "color": "#2f6fe4",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-07ofw",
+   "from": {
+    "part": "signal-f572s",
+    "pin": "E-"
+   },
+   "to": {
+    "part": "bioamp-cypfd",
+    "pin": "IN-"
+   },
+   "style": "orthogonal",
+   "color": "#2f9a54",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-xhfe6",
+   "from": {
+    "part": "signal-f572s",
+    "pin": "REF"
+   },
+   "to": {
+    "part": "bioamp-cypfd",
+    "pin": "REF"
+   },
+   "style": "orthogonal",
+   "color": "#e0a81f",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-s263u",
+   "from": {
+    "part": "bioamp-cypfd",
+    "pin": "VCC"
+   },
+   "to": {
+    "part": "pico-1",
+    "pin": "3V3"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-hztlu",
+   "from": {
+    "part": "bioamp-cypfd",
+    "pin": "GND"
+   },
+   "to": {
+    "part": "pico-1",
+    "pin": "GND.2"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-gpcwf",
+   "from": {
+    "part": "bioamp-cypfd",
+    "pin": "OUT"
+   },
+   "to": {
+    "part": "pico-1",
+    "pin": "A0"
+   },
+   "style": "orthogonal",
+   "color": "#e9782a",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-j5oa0",
+   "from": {
+    "part": "pico-1",
+    "pin": "15"
+   },
+   "to": {
+    "part": "ser-8y7ey",
+    "pin": "PWM"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-1fiam",
+   "from": {
+    "part": "bat-cvowd",
+    "pin": "+"
+   },
+   "to": {
+    "part": "sli-u1q9w",
+    "pin": "2"
+   },
+   "style": "orthogonal",
+   "color": "#17a3b8",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-y7230",
+   "from": {
+    "part": "sli-u1q9w",
+    "pin": "1"
+   },
+   "to": {
+    "part": "ser-8y7ey",
+    "pin": "V+"
+   },
+   "style": "orthogonal",
+   "color": "#2f6fe4",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-aqpb7",
+   "from": {
+    "part": "bat-cvowd",
+    "pin": "-"
+   },
+   "to": {
+    "part": "ser-8y7ey",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#2f9a54",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-0o4ss",
+   "from": {
+    "part": "bat-cvowd",
+    "pin": "-"
+   },
+   "to": {
+    "part": "pico-1",
+    "pin": "GND.4"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  }
+ ],
+ "seated": []
+}
