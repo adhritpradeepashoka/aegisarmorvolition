@@ -274,10 +274,13 @@ $('torso').addEventListener('change', e => { P.torso = e.target.checked; });
 $('volt').addEventListener('change', e => { P.volt = e.target.value; });
 $('fore').addEventListener('change', e => { P.fore = e.target.value; applyForearmChoice(); });
 $('b-reset').onclick = () => { S.ph = 0; S.pw = 0; S.phc = 0; S.al = null; P.wsweep = false; setWTarget(0); S.th = 0; S.w = 0; S.thc = 0; S.peakStop = 0; P.kill = false; P.sweep = false; $('target').value = 45; P.target = 45; $('v-target').textContent = '45.0°'; $('b-kill').textContent = 'Kill (e-stop)'; };
-$('b-kill').onclick = () => { P.kill = !P.kill; $('b-kill').textContent = P.kill ? 'Release e-stop' : 'Kill (e-stop)'; };
+$('b-kill').onclick = () => { P.kill = !P.kill; $('b-kill').textContent = P.kill ? 'Release e-stop' : 'Kill (e-stop)'; $('b-kill').style.borderColor = P.kill ? '#f85149' : ''; };
 $('b-sweep').onclick = () => { P.sweep = !P.sweep; P.kill = false; if (P.sweep) setTarget(90); };
 function setTarget(a) { P.target = a; $('target').value = a; $('v-target').textContent = a.toFixed(1) + '°'; }
 function onParams() { resizeLimbs(); }
+// moving a target slider by hand takes over from a running sweep
+$('target').addEventListener('input', () => { P.sweep = false; });
+$('wt').addEventListener('input', () => { P.wsweep = false; });
 resizeLimbs();
 
 // ---------------------------------------------------------------- readouts + graph
