@@ -28,3 +28,6 @@
 6. Only then consider a person, with the arm supported and the e-stop in reach.
 
 Every number in this file is a placeholder until step 4 gives you real measurements.
+
+
+**Note:** the sketch reads current with an INA219. The BOM now specifies an INA226 with a low-value shunt, because an INA219 breakout saturates near 3.2 A and its shunt runs hot at the DS51150 stall current. The firmware has not been ported yet. The port also needs the XIAO ESP32-S3 pin map in `docs/power.md` (the current sketch uses e-stop pin 2, which is a strapping pin on the XIAO) and an ESP32Servo or LEDC servo output. See `docs/power.md`.

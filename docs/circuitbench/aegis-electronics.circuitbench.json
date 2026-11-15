@@ -1,0 +1,968 @@
+{
+ "format": "virtual-lab",
+ "version": "0.1",
+ "libraries": {
+  "@wokwi/elements": "1.9.2",
+  "avr8js": "0.21.1"
+ },
+ "parts": [
+  {
+   "id": "bat",
+   "type": "battery",
+   "x": 40,
+   "y": 40,
+   "rotate": 0,
+   "volts": 11.1
+  },
+  {
+   "id": "cap",
+   "type": "custom-cap-100u",
+   "x": 40,
+   "y": 230,
+   "rotate": 0
+  },
+  {
+   "id": "estop",
+   "type": "slide-switch",
+   "x": 260,
+   "y": 40,
+   "rotate": 0,
+   "pos": 0
+  },
+  {
+   "id": "relay",
+   "type": "relay-dpdt",
+   "x": 480,
+   "y": 40,
+   "rotate": 0
+  },
+  {
+   "id": "flyback",
+   "type": "custom-d-1n4007",
+   "x": 480,
+   "y": 190,
+   "rotate": 0
+  },
+  {
+   "id": "servo",
+   "type": "servo",
+   "x": 960,
+   "y": 40,
+   "rotate": 0
+  },
+  {
+   "id": "ldo",
+   "type": "custom-reg-7805",
+   "x": 40,
+   "y": 420,
+   "rotate": 0
+  },
+  {
+   "id": "schottky",
+   "type": "custom-d-schottky",
+   "x": 260,
+   "y": 420,
+   "rotate": 0
+  },
+  {
+   "id": "rdiv1",
+   "type": "resistor",
+   "x": 520,
+   "y": 330,
+   "rotate": 0,
+   "ohms": 33000,
+   "len": 57.6
+  },
+  {
+   "id": "rdiv2",
+   "type": "resistor",
+   "x": 520,
+   "y": 380,
+   "rotate": 0,
+   "ohms": 10000,
+   "len": 57.6
+  },
+  {
+   "id": "xiao",
+   "type": "custom-xiao-esp32s3",
+   "x": 480,
+   "y": 520,
+   "rotate": 0
+  },
+  {
+   "id": "pill1",
+   "type": "custom-bioamp-exg-pill",
+   "x": 820,
+   "y": 440,
+   "rotate": 0,
+   "sp": "",
+   "sn": "",
+   "sr": "",
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0
+  },
+  {
+   "id": "pill2",
+   "type": "custom-bioamp-exg-pill",
+   "x": 820,
+   "y": 550,
+   "rotate": 0,
+   "sp": "",
+   "sn": "",
+   "sr": "",
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0
+  },
+  {
+   "id": "pill3",
+   "type": "custom-bioamp-exg-pill",
+   "x": 820,
+   "y": 660,
+   "rotate": 0,
+   "sp": "",
+   "sn": "",
+   "sr": "",
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0
+  },
+  {
+   "id": "pill4",
+   "type": "custom-bioamp-exg-pill",
+   "x": 820,
+   "y": 770,
+   "rotate": 0,
+   "sp": "",
+   "sn": "",
+   "sr": "",
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0
+  },
+  {
+   "id": "src1",
+   "type": "custom-signal-source",
+   "x": 1120,
+   "y": 440,
+   "rotate": 0,
+   "signal": "emg",
+   "bpm": 70,
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0,
+   "attached": 1,
+   "sp": "",
+   "sn": "",
+   "sr": ""
+  },
+  {
+   "id": "src2",
+   "type": "custom-signal-source",
+   "x": 1120,
+   "y": 550,
+   "rotate": 0,
+   "signal": "emg",
+   "bpm": 70,
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0,
+   "attached": 1,
+   "sp": "",
+   "sn": "",
+   "sr": ""
+  },
+  {
+   "id": "src3",
+   "type": "custom-signal-source",
+   "x": 1120,
+   "y": 660,
+   "rotate": 0,
+   "signal": "emg",
+   "bpm": 70,
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0,
+   "attached": 1,
+   "sp": "",
+   "sn": "",
+   "sr": ""
+  },
+  {
+   "id": "src4",
+   "type": "custom-signal-source",
+   "x": 1120,
+   "y": 770,
+   "rotate": 0,
+   "signal": "emg",
+   "bpm": 70,
+   "effort": 50,
+   "scale": 100,
+   "contact": 5,
+   "hum": 0,
+   "attached": 1,
+   "sp": "",
+   "sn": "",
+   "sr": ""
+  }
+ ],
+ "wires": [
+  {
+   "id": "w-001",
+   "from": {
+    "part": "bat",
+    "pin": "+"
+   },
+   "to": {
+    "part": "cap",
+    "pin": "+"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-002",
+   "from": {
+    "part": "bat",
+    "pin": "+"
+   },
+   "to": {
+    "part": "relay",
+    "pin": "P1"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-003",
+   "from": {
+    "part": "bat",
+    "pin": "+"
+   },
+   "to": {
+    "part": "estop",
+    "pin": "2"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-004",
+   "from": {
+    "part": "bat",
+    "pin": "+"
+   },
+   "to": {
+    "part": "ldo",
+    "pin": "IN"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-005",
+   "from": {
+    "part": "bat",
+    "pin": "-"
+   },
+   "to": {
+    "part": "cap",
+    "pin": "-"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-006",
+   "from": {
+    "part": "bat",
+    "pin": "-"
+   },
+   "to": {
+    "part": "servo",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-007",
+   "from": {
+    "part": "bat",
+    "pin": "-"
+   },
+   "to": {
+    "part": "relay",
+    "pin": "COIL2"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-008",
+   "from": {
+    "part": "bat",
+    "pin": "-"
+   },
+   "to": {
+    "part": "ldo",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-009",
+   "from": {
+    "part": "bat",
+    "pin": "-"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-010",
+   "from": {
+    "part": "relay",
+    "pin": "NO1"
+   },
+   "to": {
+    "part": "servo",
+    "pin": "V+"
+   },
+   "style": "orthogonal",
+   "color": "#e9782a",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-011",
+   "from": {
+    "part": "estop",
+    "pin": "1"
+   },
+   "to": {
+    "part": "relay",
+    "pin": "COIL1"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-012",
+   "from": {
+    "part": "flyback",
+    "pin": "K"
+   },
+   "to": {
+    "part": "relay",
+    "pin": "COIL1"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-013",
+   "from": {
+    "part": "flyback",
+    "pin": "A"
+   },
+   "to": {
+    "part": "relay",
+    "pin": "COIL2"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-014",
+   "from": {
+    "part": "ldo",
+    "pin": "OUT"
+   },
+   "to": {
+    "part": "schottky",
+    "pin": "A"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-015",
+   "from": {
+    "part": "schottky",
+    "pin": "K"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "5V"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-016",
+   "from": {
+    "part": "estop",
+    "pin": "1"
+   },
+   "to": {
+    "part": "rdiv1",
+    "pin": "1"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-017",
+   "from": {
+    "part": "rdiv1",
+    "pin": "2"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "D10"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-018",
+   "from": {
+    "part": "rdiv2",
+    "pin": "1"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "D10"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-019",
+   "from": {
+    "part": "rdiv2",
+    "pin": "2"
+   },
+   "to": {
+    "part": "bat",
+    "pin": "-"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-020",
+   "from": {
+    "part": "xiao",
+    "pin": "D9"
+   },
+   "to": {
+    "part": "servo",
+    "pin": "PWM"
+   },
+   "style": "orthogonal",
+   "color": "#8b56d6",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-021",
+   "from": {
+    "part": "pill1",
+    "pin": "OUT"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "D0"
+   },
+   "style": "orthogonal",
+   "color": "#e9782a",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-022",
+   "from": {
+    "part": "xiao",
+    "pin": "3V3"
+   },
+   "to": {
+    "part": "pill1",
+    "pin": "VCC"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-023",
+   "from": {
+    "part": "xiao",
+    "pin": "GND"
+   },
+   "to": {
+    "part": "pill1",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-024",
+   "from": {
+    "part": "src1",
+    "pin": "E+"
+   },
+   "to": {
+    "part": "pill1",
+    "pin": "IN+"
+   },
+   "style": "orthogonal",
+   "color": "#2f6fe4",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-025",
+   "from": {
+    "part": "src1",
+    "pin": "E-"
+   },
+   "to": {
+    "part": "pill1",
+    "pin": "IN-"
+   },
+   "style": "orthogonal",
+   "color": "#2f9a54",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-026",
+   "from": {
+    "part": "src1",
+    "pin": "REF"
+   },
+   "to": {
+    "part": "pill1",
+    "pin": "REF"
+   },
+   "style": "orthogonal",
+   "color": "#e0a81f",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-027",
+   "from": {
+    "part": "pill2",
+    "pin": "OUT"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "D1"
+   },
+   "style": "orthogonal",
+   "color": "#e9782a",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-028",
+   "from": {
+    "part": "xiao",
+    "pin": "3V3"
+   },
+   "to": {
+    "part": "pill2",
+    "pin": "VCC"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-029",
+   "from": {
+    "part": "xiao",
+    "pin": "GND"
+   },
+   "to": {
+    "part": "pill2",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-030",
+   "from": {
+    "part": "src2",
+    "pin": "E+"
+   },
+   "to": {
+    "part": "pill2",
+    "pin": "IN+"
+   },
+   "style": "orthogonal",
+   "color": "#2f6fe4",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-031",
+   "from": {
+    "part": "src2",
+    "pin": "E-"
+   },
+   "to": {
+    "part": "pill2",
+    "pin": "IN-"
+   },
+   "style": "orthogonal",
+   "color": "#2f9a54",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-032",
+   "from": {
+    "part": "src1",
+    "pin": "REF"
+   },
+   "to": {
+    "part": "pill2",
+    "pin": "REF"
+   },
+   "style": "orthogonal",
+   "color": "#e0a81f",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-033",
+   "from": {
+    "part": "pill3",
+    "pin": "OUT"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "D3"
+   },
+   "style": "orthogonal",
+   "color": "#e9782a",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-034",
+   "from": {
+    "part": "xiao",
+    "pin": "3V3"
+   },
+   "to": {
+    "part": "pill3",
+    "pin": "VCC"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-035",
+   "from": {
+    "part": "xiao",
+    "pin": "GND"
+   },
+   "to": {
+    "part": "pill3",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-036",
+   "from": {
+    "part": "src3",
+    "pin": "E+"
+   },
+   "to": {
+    "part": "pill3",
+    "pin": "IN+"
+   },
+   "style": "orthogonal",
+   "color": "#2f6fe4",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-037",
+   "from": {
+    "part": "src3",
+    "pin": "E-"
+   },
+   "to": {
+    "part": "pill3",
+    "pin": "IN-"
+   },
+   "style": "orthogonal",
+   "color": "#2f9a54",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-038",
+   "from": {
+    "part": "src1",
+    "pin": "REF"
+   },
+   "to": {
+    "part": "pill3",
+    "pin": "REF"
+   },
+   "style": "orthogonal",
+   "color": "#e0a81f",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-039",
+   "from": {
+    "part": "pill4",
+    "pin": "OUT"
+   },
+   "to": {
+    "part": "xiao",
+    "pin": "D8"
+   },
+   "style": "orthogonal",
+   "color": "#e9782a",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-040",
+   "from": {
+    "part": "xiao",
+    "pin": "3V3"
+   },
+   "to": {
+    "part": "pill4",
+    "pin": "VCC"
+   },
+   "style": "orthogonal",
+   "color": "#d33a30",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-041",
+   "from": {
+    "part": "xiao",
+    "pin": "GND"
+   },
+   "to": {
+    "part": "pill4",
+    "pin": "GND"
+   },
+   "style": "orthogonal",
+   "color": "#22282c",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-042",
+   "from": {
+    "part": "src4",
+    "pin": "E+"
+   },
+   "to": {
+    "part": "pill4",
+    "pin": "IN+"
+   },
+   "style": "orthogonal",
+   "color": "#2f6fe4",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-043",
+   "from": {
+    "part": "src4",
+    "pin": "E-"
+   },
+   "to": {
+    "part": "pill4",
+    "pin": "IN-"
+   },
+   "style": "orthogonal",
+   "color": "#2f9a54",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  },
+  {
+   "id": "w-044",
+   "from": {
+    "part": "src1",
+    "pin": "REF"
+   },
+   "to": {
+    "part": "pill4",
+    "pin": "REF"
+   },
+   "style": "orthogonal",
+   "color": "#e0a81f",
+   "width": 3,
+   "bend": 0.5,
+   "sag": null,
+   "kind": "normal"
+  }
+ ],
+ "seated": []
+}

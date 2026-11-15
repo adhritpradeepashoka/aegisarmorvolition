@@ -12,9 +12,9 @@ A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-
 ## What it is and how to use it
 
 - **Black Carapace** is a tight full-sleeved shirt with steel-thread electrodes. Muscle BioAmp Candy boards turn the muscle signal into a voltage the controller can read.
-- **Aegis** is a one-arm servo exoskeleton: a DSSERVO DS51150 at the elbow (optional wrist joint), Velcro straps instead of rigid cuffs, mechanical end stops, and a chest support that links the arm to a chest plate.
+- **Aegis** is a one-arm servo exoskeleton: a DSSERVO DS51150 at the elbow (no wrist servo: it adds weight for little benefit), Velcro straps instead of rigid cuffs, mechanical end stops, and a chest support that links the arm to a chest plate.
 - **To look at it:** open the interactive simulator (enable GitHub Pages, then visit `/sim/`). Drag the target angle, load the arm, change the supply voltage and torque limit, show or hide the wrist and the chest support, and press *Kill (e-stop)*.
-- **Garment status:** the garment is not built yet. The plan (4 Candy boards on the chest plate, steel-thread electrode traces running all the way to the chest plate, to be tested on both a sleeve and a full-sleeved shirt) is in `docs/garment.md`.
+- **Garment status:** the garment is not built yet. The plan (4 Candy boards on the chest plate, steel-thread electrode traces running through a tight shirt to the chest, tested on both a sleeve and a full shirt, with the noise to be characterised on the bench) is in `docs/garment.md`.
 - **To read the parts:** `full-size-v15/` holds the 3D files, `docs/wiring.md` the wiring.
 
 ## Why I made it
@@ -24,12 +24,12 @@ I have a passion for brain-computer interfaces and I'm a fan of Warhammer 40k, t
 ## Screenshots
 
 ### Full 3D assembly
-Arm, chest support, wrist module and body reference in the simulator (placeholder geometry):
+Arm, chest support, an older wrist module (not part of the current build) and body reference in the simulator (placeholder geometry):
 
 ![Full 3D assembly in the simulator](docs/images/sim-full-assembly.png)
 
 ### PCB
-No custom PCB in this build: the electronics are Upside Down Labs boards (Muscle BioAmp Candy, NPG Lite). TODO (Adhrit): confirm, or add your own board here.
+No custom PCB in this build: the electronics are Upside Down Labs boards (Muscle BioAmp Candy x4) and a Seeed XIAO ESP32-S3 controller. TODO (Adhrit): confirm, or add your own board here.
 
 ### Schematic / wiring diagram
 Made in CircuitBench (concept diagram, stand-in parts, see `docs/wiring.md` for what each stand-in means):
@@ -57,7 +57,7 @@ Parts only, then the elbow at 90 degrees:
 | Folder | What goes there |
 |---|---|
 | `cad/` | **Your own** Tinkercad / FreeCAD design files and exports (the files Fallen reviews). |
-| `firmware/` | Code for the NPG Lite / servo controller (torque limit, current limit, kill switch). |
+| `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `journal/` | Photos and notes that go with your Fallen journal entries. |
 | `docs/` | Design notes, safety notes, measurements. |
 | `full-size-v15/`, `generator/` | Full-size part files and the script that makes them. |

@@ -4,6 +4,9 @@
 
 Project file: [`circuitbench/aegis-wiring.circuitbench.json`](circuitbench/aegis-wiring.circuitbench.json)
 (open https://circuitbenchlab.onrender.com, then *File, Import project file*).
+
+> **Newer diagram.** The picture and file above are the older Pico stand-in version. The current electronics design (XIAO ESP32-S3, 4 BioAmp pills, relay contactor with e-stop, 5 V rail) is in [`circuitbench/aegis-electronics.circuitbench.json`](circuitbench/aegis-electronics.circuitbench.json) (File, Import project file). Stand-ins there: generic battery for the 3S pack, 7805 for the buck converter, small relay for the 12 V relay, generic servo for the DS51150, pills for the Candy boards; BMS, fuse, INA226 and TVS are not modelled. Drawn in CircuitBench; not simulated.
+
 It is a **concept diagram**, not a tested circuit.
 
 ## Connections
@@ -22,9 +25,9 @@ It is a **concept diagram**, not a tested circuit.
 
 | In the diagram | In the real build |
 |---|---|
-| Raspberry Pi Pico | NPG Lite or the servo controller in `firmware/` |
+| Raspberry Pi Pico | Seeed XIAO ESP32-S3 (servo controller in `firmware/`, needs a port from the Arduino-style sketch) |
 | One BioAmp EXG Pill and one signal source | several Muscle BioAmp Candy boards on the steel-thread electrodes of the sleeve |
-| SG90-style servo at 5 V | DSSERVO DS51150 at 10 to 12.6 V, on its own supply, lead 300 mm |
+| SG90-style servo at 5 V | DSSERVO DS51150 at 9 to 12.6 V, on its own supply, lead 300 mm |
 | 5 V battery | a supply sized for the DS51150's stall current, with a fuse |
 | Slide switch | a proper hardware e-stop (22 mm pushbutton) |
 
