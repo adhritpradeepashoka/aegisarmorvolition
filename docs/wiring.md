@@ -5,7 +5,9 @@
 Project file: [`circuitbench/aegis-wiring.circuitbench.json`](circuitbench/aegis-wiring.circuitbench.json)
 (open https://circuitbenchlab.onrender.com, then *File, Import project file*).
 
-> **Newer diagram.** The picture and file above are the older Pico stand-in version. The current electronics design (XIAO ESP32-S3, 4 BioAmp pills, relay contactor with e-stop, 5 V rail) is in [`circuitbench/aegis-electronics.circuitbench.json`](circuitbench/aegis-electronics.circuitbench.json) (File, Import project file). Stand-ins there: generic battery for the 3S pack, 7805 for the buck converter, small relay for the 12 V relay, generic servo for the DS51150, pills for the Candy boards; BMS, fuse, INA226 and TVS are not modelled. Drawn in CircuitBench; not simulated.
+> **Newer diagram.** The picture and file above are the older Pico stand-in version. The current electronics design (XIAO ESP32-S3, 4 BioAmp pills, relay contactor with e-stop, 5 V rail) is in [`circuitbench/aegis-electronics.circuitbench.json`](circuitbench/aegis-electronics.circuitbench.json) (File, Import project file). CircuitBench does not have an exact library model for every planned component, so the diagram uses the closest available symbols: a generic battery for the 3S LiPo pack, a 7805 symbol for the LM2596 buck converter, a small relay for the 12 V relay, a generic servo for the DS51150, and pill symbols for the Muscle BioAmp Candy boards.
+
+These substitutions represent the intended electrical functions and connections, rather than the exact physical components. Their default dimensions, ratings, terminals and behaviour should not be interpreted as specifications for the actual hardware. The BMS, fuse, INA226 and TVS are not modelled. Drawn in CircuitBench; not simulated.
 
 It is a **concept diagram**, not a tested circuit.
 
@@ -23,12 +25,12 @@ It is a **concept diagram**, not a tested circuit.
 
 ## What the stand-ins mean (CircuitBench has no exact part for these)
 
-| In the diagram | In the real build |
-|---|---|
-| Raspberry Pi Pico | Seeed XIAO ESP32-S3 (servo controller in `firmware/`, needs a port from the Arduino-style sketch) |
-| One BioAmp EXG Pill and one signal source | several Muscle BioAmp Candy boards on the steel-thread electrodes of the sleeve |
-| SG90-style servo at 5 V | DSSERVO DS51150 at 9 to 12.6 V, on its own supply, lead 300 mm |
-| 5 V battery | a supply sized for the DS51150's stall current, with a fuse |
-| Slide switch | a proper hardware e-stop (22 mm pushbutton) |
+| Diagram component | Actual planned component | Explanation |
+|---|---|---|
+| Raspberry Pi Pico | Seeed XIAO ESP32-S3 | Represents the microcontroller. The older Pico pin labels are not XIAO pin assignments. |
+| One BioAmp EXG Pill and signal source | Multiple Muscle BioAmp Candy boards | Simplifies the EMG input and electrode connections. |
+| SG90-style servo | DSSERVO DS51150 | Represents a servo actuator, not the actual DS51150 dimensions, torque or supply requirements. |
+| 5 V battery | 3S LiPo supply | Represents a power source, not the actual battery voltage or capacity. |
+| Slide switch | Hardware emergency-stop button | Illustrates interruption of servo power, not the final e-stop implementation. |
 
 Still to do before real use: servo power from its own supply (not from the controller), a fuse, a current limit, and the e-stop cutting servo power in hardware. See `safety.md`.

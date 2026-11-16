@@ -38,6 +38,7 @@
   </div>
   <div id="side">
     <h1>Aegis arm + chest support: physics sim</h1>
+    <div class="note">AI-written simulator. This is an experimental software model, not a validated physical representation of the finished device.</div>
     <div class="sub">Right arm. Angle 0° = arm hanging straight, flexion lifts the hand. Placeholder geometry and assumed numbers: see "Assumptions" below.</div>
 
     <h2>Command</h2>
@@ -102,6 +103,7 @@
     <input type="range" id="mu" min="0.3" max="2.0" step="0.1" value="0.8">
     <label>Show chest support <input type="checkbox" id="chest" checked></label>
     <label>Show torso reference <input type="checkbox" id="torso" checked></label>
+    <div class="note">The torso is a visual context model showing the chest support relative to the upper body. It is not a structural part of the exoskeleton.</div>
 
     <h2>Live readout</h2>
     <table>

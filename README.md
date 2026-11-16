@@ -43,7 +43,7 @@ Full file: [`bom.csv`](bom.csv). Prices in rupees, as listed on 16 Nov 2026 (onl
 | **TOTAL (all rows)** | | **21,848.89** | | of which est. 400 | |
 <!-- BOM:END -->
 
-> **Note:** `test-files/` is the old v12 set. The part files in `cad/` are reference geometry.
+> **Note:** `test-files/` contains the older v12 set, retained for CircuitBench testing. The current part models and their exports are in `cad/`.
 
 A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
@@ -62,7 +62,9 @@ I've been passionate about brain-computer and body-computer interfaces for a lon
 ## Screenshots
 
 ### Full 3D assembly
-Arm, chest support, an older wrist module (not part of the current build) and body reference in the simulator (placeholder geometry):
+Arm, chest support, an older wrist module (not part of the current build), and a simplified torso model.
+
+The torso is included to provide visual context for the exoskeleton's position relative to the wearer's upper body. It helps illustrate the placement of the chest plate and support structure. It is a visual model, not a printable component or structural part of the exoskeleton.
 
 ![Full 3D assembly in the simulator](docs/images/sim-full-assembly.png)
 
@@ -70,7 +72,7 @@ Arm, chest support, an older wrist module (not part of the current build) and bo
 No custom PCB in this build: the electronics are Upside Down Labs boards (Muscle BioAmp Candy x4) and a Seeed XIAO ESP32-S3 controller.
 
 ### Schematic / wiring diagram
-Made in CircuitBench (concept diagram, stand-in parts, see `docs/wiring.md` for what each stand-in means):
+Created in CircuitBench as a conceptual wiring diagram. Where the exact hardware is unavailable in the component library, generic components are used to represent the corresponding electrical functions. The substitutions and their limitations are explained in `docs/wiring.md`.
 
 ![Wiring diagram](docs/images/wiring-circuitbench.png)
 
@@ -99,9 +101,9 @@ Parts only, then the elbow at 90 degrees:
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `docs/` | Design notes, safety notes, measurements. |
 | `cad/freecad/` | **Editable FreeCAD source** (`.FCStd`) for every part, plus proper STEP exports in `cad/freecad/step/`. See `cad/freecad/README.md`. |
-| `cad/stl/` | STL files of the parts. |
+| `cad/stl/` | STL files of the individual parts, along with assembled-view preview meshes showing their relative positions and arrangement. |
 | `cad/old_steps/` | Older STEP files converted from the STL meshes (not editable by dimension). |
-| `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
+| `sim/` | Interactive physics simulation of the elbow, with torso and limb visuals providing body-position context around the mechanism. |
 | `test-files/` | Placeholder STLs used only for testing in CircuitBench. see the note above. |
 | `bom.csv` | Bill of materials (provisional, see `docs/bom-notes.md`). |
 
