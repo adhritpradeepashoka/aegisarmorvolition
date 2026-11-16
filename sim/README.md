@@ -2,7 +2,7 @@ Interactive physics simulation (browser, three.js). Work in progress.
 
 ## AI development disclosure
 
-The browser-based physics simulator was written by AI. It is a work in progress, and its physical parameters and simulation results should be treated as estimates rather than experimentally validated engineering results.
+The browser-based physics simulator was written by AI, as I dont have the personal expertise to build it. It is a work in progress, and its physical parameters and simulation results should be treated as estimates rather than experimentally validated engineering results. I created it for the reviewer's ease.
 
 The simulator includes a torso model and translucent arm and hand visuals to show the exoskeleton in relation to a human body. These provide anatomical and positional context for viewing the mechanism. They are visual elements of the scene and are not structural components of the exoskeleton.
 
