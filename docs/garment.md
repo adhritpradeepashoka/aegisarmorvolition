@@ -25,6 +25,18 @@ Every electronic part sits on the chest plate. The garment has no boards, no bat
 
 **Fallback:** if the long leads turn out unusable, move each Candy onto the garment next to its pads and run only 3V3, GND and 4 outputs to the chest. That would need a removable board mount on the garment (not designed).
 
+## Stud mounting (salvaged studs, plan)
+The chest studs come from the builder's own disposable ECG electrodes. The studs are solid metal and have no eyelet.
+1. Cut each stud out with a ring of the foam around it. Peel off the adhesive backing and wipe the gel off the stud and the foam.
+2. Wrap the conductive thread several times tightly around the stud's neck, under the head. This is the electrical joint. Tie off.
+3. Sew the foam ring to the garment with ordinary thread, with stitches all around it. A small piece of felt under the foam spreads the pull. This is the mechanical hold.
+4. Test every stud with a multimeter from the end of the thread to the top of the stud (should read close to 0 ohm), then tug firmly and check the reading does not jump.
+5. Try this on a scrap of fabric first. If it holds, repeat it on the garment.
+
+**Simpler fallback for the first prototype:** skip the studs, sew each thread end through a small ring or eyelet, solder or crimp a thin flexible wire to the ring, and strain-relieve the wire to the fabric a few centimetres away. This gives up washing the garment with the cables clipped on.
+
+Thread cannot be soldered directly (stainless thread has an oxide layer that ordinary solder does not wet, and the heat damages the fibres).
+
 ## Shared reference
 - All 4 channels share **one reference electrode** on a bony, electrically quiet spot, away from the muscles being read (exact spot to decide on the wearer).
 - Plausible but **not documented by Upside Down Labs for the Candy**. Their 2-channel EXG Pill guide ties both references to one electrode, and their NPG Lite multichannel kit uses one REF cable. Validate with 2 boards first: compare noise and crosstalk with a shared and a separate reference.
