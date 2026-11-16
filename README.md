@@ -39,7 +39,7 @@ Full file: [`bom.csv`](bom.csv). Prices in rupees, checked 16 Nov 2026; "est." m
 | **TOTAL (all rows)** | | **20,319.64** | | of which est. 2552 | |
 <!-- BOM:END -->
 
-> **Note:** `test-files/` is the old v12 set. The part files in `cad/` and `generator/` are reference geometry.
+> **Note:** `test-files/` is the old v12 set. The part files in `cad/` are reference geometry.
 
 A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
@@ -83,7 +83,6 @@ Parts only, then the elbow at 90 degrees:
 ### Anything else
 - Live simulator: `/sim/` (GitHub Pages)
 - Wiring project file for CircuitBench: `docs/circuitbench/aegis-wiring.circuitbench.json`
-- Generator script for all parts: `generator/make_aegis_v15.py`
 
 ## For the build submission
 
@@ -99,8 +98,8 @@ Parts only, then the elbow at 90 degrees:
 |---|---|
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `docs/` | Design notes, safety notes, measurements. |
-| `cad/freecad/`, `generator/freecad/` | **Editable FreeCAD source** (`.FCStd`) for every reference part, proper STEP exports in `cad/freecad/step/`, and the script that builds them. See `cad/freecad/README.md`. |
-| `cad/stl/`, `generator/` | STL files of the reference parts and the script that makes them. Reference geometry, not my own CAD. |
+| `cad/freecad/` | **Editable FreeCAD source** (`.FCStd`) for every reference part, plus proper STEP exports in `cad/freecad/step/`. See `cad/freecad/README.md`. |
+| `cad/stl/` | STL files of the reference parts. Reference geometry, not my own CAD. |
 | `cad/old_steps/` | Older STEP files converted from the STL meshes (not editable by dimension). |
 | `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
 | `test-files/` | Placeholder STLs used only for testing in CircuitBench. See note below. |
