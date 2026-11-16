@@ -53,7 +53,7 @@ I've been passionate about brain-computer and body-computer interfaces for a lon
 - **Aegis** is a one-arm servo exoskeleton: a DSSERVO DS51150 at the elbow (no wrist servo: it adds weight for little benefit), Velcro straps instead of rigid cuffs, mechanical end stops, and a chest support that links the arm to a chest plate.
 - **To look at it:** open the interactive simulator (enable GitHub Pages, then visit `/sim/`). Drag the target angle, load the arm, change the supply voltage and torque limit, show or hide the wrist and the chest support, and press *Kill (e-stop)*.
 - **Garment status:** the garment is not built yet. The plan (4 Candy boards on the chest plate, steel-thread electrode traces running through a tight shirt to the chest, tested on both a sleeve and a full shirt, with the noise to be characterised on the bench) is in `docs/garment.md`.
-- **To read the parts:** `cad/` holds the 3D files, `docs/wiring.md` the wiring.
+- **To read the parts:** `cad/` holds the 3D files (`cad/freecad/` editable source, `cad/stl/` STL files, `cad/old_steps/` older STEP files), `docs/wiring.md` the wiring.
 
 ## Why I made it
 
@@ -99,8 +99,9 @@ Parts only, then the elbow at 90 degrees:
 |---|---|
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `docs/` | Design notes, safety notes, measurements. |
-| `cad/`, `cad/step/`, `generator/` | Reference part files (STL, plus STEP conversions in `cad/step/`) and the script that makes them. Reference geometry, not my own CAD. |
-| `cad/freecad/`, `generator/freecad/` | Editable FreeCAD source (`.FCStd`) for every reference part, proper STEP exports in `cad/freecad/step/`, and the script that builds them. See `cad/freecad/README.md`. |
+| `cad/freecad/`, `generator/freecad/` | **Editable FreeCAD source** (`.FCStd`) for every reference part, proper STEP exports in `cad/freecad/step/`, and the script that builds them. See `cad/freecad/README.md`. |
+| `cad/stl/`, `generator/` | STL files of the reference parts and the script that makes them. Reference geometry, not my own CAD. |
+| `cad/old_steps/` | Older STEP files converted from the STL meshes (not editable by dimension). |
 | `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
 | `test-files/` | Placeholder STLs used only for testing in CircuitBench. See note below. |
 | `bom.csv` | Bill of materials (provisional, see `docs/bom-notes.md`). |

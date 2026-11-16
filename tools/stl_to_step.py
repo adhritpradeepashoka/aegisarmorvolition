@@ -1,4 +1,4 @@
-"""Convert the reference STL files in cad/ to faceted STEP files in cad/step/.
+"""Convert the reference STL files in cad/stl/ to faceted STEP files in cad/old_steps/.
 
 Mesh-derived: faces are triangles (coplanar ones merged), so these are NOT
 parametric models. Run from the repo root: python3 tools/stl_to_step.py
@@ -18,10 +18,10 @@ from OCP.STEPControl import STEPControl_Writer, STEPControl_AsIs
 from OCP.IFSelect import IFSelect_RetDone
 
 SKIP = ("00_", "00B_", "13_", "13B_", "19_")  # big assembly previews; their parts are converted individually
-for f in sorted(glob.glob("cad/*.stl")):
+for f in sorted(glob.glob("cad/stl/*.stl")):
     if os.path.basename(f).startswith(SKIP):
         continue
-    out = "cad/step/" + os.path.basename(f)[:-4] + ".step"
+    out = "cad/old_steps/" + os.path.basename(f)[:-4] + ".step"
     shape = TopoDS_Shape()
     StlAPI_Reader().Read(shape, f)
     sew = BRepBuilderAPI_Sewing(1e-4)

@@ -1,6 +1,6 @@
 # STEP versions of the reference parts
 
-These 20 STEP files were converted from the STL files in `../` by `tools/stl_to_step.py`.
+These 20 STEP files were converted from the STL files in `../stl/` by `tools/stl_to_step.py`.
 
 - The STL parts are reference geometry, not my own CAD.
 - The STEP files are mesh-derived: faces are triangles (coplanar ones merged), so they are solid and have correct volume, but they are not parametric and cannot be edited by dimension.
