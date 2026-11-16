@@ -8,6 +8,8 @@
 | `old_steps/` | The earlier STEP files, converted from the STL meshes (triangle faces, not editable by dimension). Kept for reference. |
 | `stl/` | Individual STL files for the parts, plus the assembly previews. |
 
+**Assembly previews and body models:** `00`, `00B`, `13`, `13B` and `19` in `stl/` are assembled-view previews that place several parts together in the assembly coordinate system, so the arrangement and orientation can be inspected. `17` (torso) and `18` (arm) are body visuals for context. None of these seven is a printable part.
+
 **Still placeholder:** DS51150 ear-hole pattern, horn pattern and lead-exit side (not confirmed from a drawing). Measure the servo before printing.
 
 `../test-files/` holds the older v12 print set and is outdated.

@@ -47,7 +47,7 @@ Full file: [`bom.csv`](bom.csv). Prices in rupees, as listed on 16 Nov 2026 (onl
 
 A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
-> **Status: early. Nothing here is a finished or tested design yet.**
+> **Status: design stage. Nothing is built, bought or tested yet; the BOM is the shopping list for when parts are funded. The firmware in `firmware/` was written for an earlier generic board with an INA219 sensor and has not been ported to the planned XIAO ESP32-S3 and INA260.**
 
 I've been passionate about brain-computer and body-computer interfaces for a long time, and I'm a (secretive) fan of Warhammer 40k, especially its tech. The Black Carapace, the interface space marines use to control their power armor, is the thing I've most wanted to build my own version of. It's a project I kept putting off, and Fallen gave me the push to start. This is my version: a tight full-sleeved shirt with steel-thread electrodes that reads my muscle signals (Black Carapace), driving a servo elbow exoskeleton for my right arm (Aegis).
 
@@ -98,7 +98,7 @@ Parts only, then the elbow at 90 degrees:
 
 | Folder | What goes there |
 |---|---|
-| `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
+| `firmware/` | Draft servo controller (current limit, kill switch). Not yet ported to the XIAO ESP32-S3 / INA260 hardware. |
 | `docs/` | Design notes, safety notes, measurements. |
 | `cad/freecad/` | **Editable FreeCAD source** (`.FCStd`) for every part, plus proper STEP exports in `cad/freecad/step/`. See `cad/freecad/README.md`. |
 | `cad/stl/` | STL files of the individual parts, plus assembly preview meshes. |

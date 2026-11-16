@@ -2,7 +2,7 @@
 
 `aegis_controller/aegis_controller.ino`: controller v1 for the Aegis elbow.
 
-**Status: written, not compiled, not tested on hardware.** Do not power the servo from this until the bench tests below pass.
+**Status: written for an earlier generic board with an INA219 current sensor. It has not been ported to the planned hardware (XIAO ESP32-S3, INA260, EMG input from the Candy boards), not compiled, and not tested.** Do not power the servo from this until the bench tests below pass.
 
 ## What it protects against
 - **E-stop:** the e-stop pushbutton must cut servo power in hardware. The code latches a fault and detaches the servo when it sees the e-stop pressed, as a second layer.

@@ -88,9 +88,9 @@ Old per-row notes and sources, kept word for word. The current prices and stock 
 - Old source: Zbotic / Robu LM2596 or MP1584 module (about 60-100); Schottky diode a few rupees
 - Notes: Price seen 16 Nov 2026 (LM2596S module 60 incl. GST on Zbotic, MP1584 91; LM2596 rated 2 A, 3 A max). The XIAO needs well under 1 A, so a small module is enough. The XIAO 5V pin takes external power only through a diode. Set the output to 5.0 V with a multimeter BEFORE connecting the XIAO. Keep it away from the thread runs (switching noise)
 
-## INA226 current sensor module
-- Old source: Sharvi Electronics, Bengaluru (ex-tax; REES52 199)
-- Notes: Replace the module's shunt. The INA219 in the firmware saturates near 3.2 A, so firmware needs a port
+## INA260 current/voltage sensor (current BOM part; replaces earlier INA226 and INA219 plans)
+- Old source: an INA226 module (Sharvi Electronics, Bengaluru; REES52 199) with a replacement shunt was the earlier plan
+- Notes: The BOM now uses an INA260 (built-in 2 mOhm shunt, 15 A, Robocraze). The firmware still targets an INA219, which saturates near 3.2 A, so it needs a port to the INA260 (see `firmware/README.md` and `power.md`)
 
 ## Shunt 5 mOhm, 1%, 1-2 W, Kelvin (4-wire)
 - Old source: element14 India / Mouser India / DigiKey India
