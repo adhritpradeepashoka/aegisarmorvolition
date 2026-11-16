@@ -7,7 +7,7 @@ Rules to keep in mind (from the Fallen rules as understood): parts you should de
 Prices marked "est." in the status column are estimates, not looked up. Parts the builder already owns are 0. On 16 Nov the electronics were moved to Robu and Robocraze where they were in stock; the servo, Candy boards and steel thread stay with their special suppliers.
 
 Design decisions reflected in the BOM:
-- **No wrist servo.** It adds weight and little benefit, so it was dropped. The wrist parts (`04`, `09` to `13B`) in `full-size-v15/` and the wrist module in the simulator are left over from earlier versions and are not part of the current build.
+- **No wrist servo.** It adds weight and little benefit, so it was dropped. The wrist parts (`04`, `09` to `13B`) in `cad/` and the wrist module in the simulator are left over from earlier versions and are not part of the current build.
 - **Controller:** XIAO ESP32-S3, not an NPG Lite.
 - **4 Muscle BioAmp Candy boards**, all on the chest plate.
 - Power parts are a proposal; see `power.md`. Prices were seen on 14 Nov 2026 and change; blank cells were not checked.
@@ -19,7 +19,7 @@ Old per-row notes and sources, kept word for word. The current prices and stock 
 
 ## DS51150 servo (elbow), 12 V, 180 deg
 - Old source: Probots PRO3841 (in stock, GST incl, 1-3 day shipping); cheaper: eTechRobot 2799, RoboticsDNA 2839, Rees52 1899 (stock unclear), AliExpress/aifitlab import about USD 43 (backordered)
-- Notes: Request the Probots price (6999 incl. GST, seen 16 Nov 2026) so the grant covers the in-stock listing; buy cheaper only if the variant checks out. Need the plain DS51150: single shaft, 180 deg, horn included (not RDS dual-shaft with brackets, not SSG 270 deg). Datasheet: 9-12.6 V, stall 7.4/8.0/8.3 A at 10/12/12.6 V, 65x30x48 mm, 162-175 g, 300 mm lead. Prices seen 1899-14351 and some listings give wrong specs or may be clones: buy from a seller with returns and measure stall current on arrival. Listed size 65x30x48 mm differs from the 57x31x57 mm cradle in full-size-v15: measure the real servo before printing final parts. Ear/horn hole pattern and lead side unconfirmed
+- Notes: Request the Probots price (6999 incl. GST, seen 16 Nov 2026) so the grant covers the in-stock listing; buy cheaper only if the variant checks out. Need the plain DS51150: single shaft, 180 deg, horn included (not RDS dual-shaft with brackets, not SSG 270 deg). Datasheet: 9-12.6 V, stall 7.4/8.0/8.3 A at 10/12/12.6 V, 65x30x48 mm, 162-175 g, 300 mm lead. Prices seen 1899-14351 and some listings give wrong specs or may be clones: buy from a seller with returns and measure stall current on arrival. Listed size 65x30x48 mm differs from the 57x31x57 mm cradle in cad: measure the real servo before printing final parts. Ear/horn hole pattern and lead side unconfirmed
 
 ## Seeed XIAO ESP32-S3
 - Old source: Already owned (new price about 790, Robocraze)
