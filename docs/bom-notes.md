@@ -4,7 +4,7 @@
 
 Rules to keep in mind (from the Fallen rules as understood): parts you should design yourself (brackets, mounts, frames) should be designed, not bought as modules/kits. Check with Hack Club whether the Muscle BioAmp Candy boards count as acceptable components for this project.
 
-**Currency:** `bom.csv` and the README table are in US dollars (about 95 INR per USD). The notes in this file, including the old per-row notes below, keep the Indian rupee (INR) figures as originally seen.
+**Currency:** `bom.csv` and the README table show both US dollars (`usd_each`, about 95 INR per USD) and the original Indian rupee prices (`inr_each`). The notes in this file, including the old per-row notes below, keep the Indian rupee (INR) figures as originally seen.
 
 Prices marked "est." in the status column are estimates, not looked up. Parts the builder already owns are 0. On 16 Nov the electronics were moved to Robu and Robocraze where they were in stock; the servo, Candy boards and steel thread stay with their special suppliers.
 

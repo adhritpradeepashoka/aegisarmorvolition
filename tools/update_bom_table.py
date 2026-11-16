@@ -13,13 +13,13 @@ def money(v):
     return f"{f:,.0f}" if f == int(f) else f"{f:,.2f}"
 
 rows = list(csv.reader(open("bom.csv", newline="")))[1:]
-lines = ["| Item | Qty | USD each | Store | Status | Link |", "|---|---:|---:|---|---|---|"]
-for item, qty, price, store, status, link in rows:
+lines = ["| Item | Qty | USD each | INR each | Store | Status | Link |", "|---|---:|---:|---:|---|---|---|"]
+for item, qty, price, store, status, link, inr in rows:
     if item.startswith("TOTAL"):
-        lines.append(f"| **{item}** | | **{money(price)}** | | {status} | |")
+        lines.append(f"| **{item}** | | **{money(price)}** | **{money(inr)}** | | {status} | |")
     else:
         lk = "owned" if link == "owned" else (f"[link]({link})" if link else "none yet")
-        lines.append(f"| {item} | {qty} | {money(price)} | {store} | {status} | {lk} |")
+        lines.append(f"| {item} | {qty} | {money(price)} | {money(inr)} | {store} | {status} | {lk} |")
 table = "\n".join(lines)
 
 s = open("README.md").read()
