@@ -10,8 +10,8 @@ This page was updated after research on 14 Nov 2026. Nothing here has been built
 - Several Indian listings give wrong specs. Do not size anything from listing text.
 
 ## Proposed architecture
-- **Pack:** 3S Li-ion with Molicel P28A cells (35 A max discharge each). 3S1P (30 Wh, about 145 g of cells) already supplies 4x the stall current and halves the weight and stored energy on the body. 3S2P (about 290 g of cells) gives more runtime if you need it.
-- **BMS:** 3S board with balancing, between the pack and everything else, with published overcurrent and short-circuit trip values. It protects the cells, not the servo or the wiring. Confirm by test that it does not trip on servo start.
+- **Pack:** 3S LiPo drone pack, 11.1 V 2200 mAh 35C (about 24 Wh), with an XT60 plug and a JST-XH balance lead. Chosen on 16 Nov 2026 over a 3S 18650 pack to avoid cell holders and spot welding. 35C is far above the servo's stall current. Weight is probably about 140 to 190 g; weigh the real pack.
+- **Protection (no BMS, drone LiPos have none):** charge only with a balance charger; 10 A fuse in the pack + line; a firmware low-voltage cutoff using the INA226 bus voltage (plan: about 3.3 V per cell, i.e. about 10 V, filtered so servo sag does not trip it; tune on the bench). Keep the pack in a rigid case on the chest plate, away from the arm joint; never charge it unattended; stop using it if it puffs or is dented. An optional BMS is in the BOM only if you switch to cylindrical cells.
 - **Fuse:** 10 A blade fuse in the pack + line.
 - **Voltage headroom problem:** a full 3S pack is 12.6 V, which is the servo's maximum, and back-driving the elbow can push the bus higher. Options: a TVS diode (about 15 V, check its clamp voltage) and a 470 uF+ low-ESR capacitor at the servo, or charge only to about 12.3 V with an adjustable charger. A 3S LiFePO4 pack would give headroom (about 10.8 V full, standard chemistry figures, not checked) at the cost of torque.
 - **Servo power path:** pack + -> fuse -> relay contacts -> INA226 shunt -> DS51150 V+. The XIAO and the Candy boards are not powered from this path.
@@ -39,7 +39,7 @@ This page was updated after research on 14 Nov 2026. Nothing here has been built
 1. Stall current and torque at 10, 12 and 12.6 V, with the horn clamped.
 2. 3.3 V signal reliability across the full range at 12.6 V.
 3. Peak bus voltage while back-driving the elbow by hand.
-4. BMS does not trip on servo start, and does trip on a (fused) short.
+4. The low-voltage cutoff trips at the set voltage and does not trip on servo start, and the fuse blows on a (fused) short.
 5. Relay drops out reliably when the pack is low; contacts after stall breaks.
 6. Servo case temperature while holding (no duty-cycle rating is published).
 7. Pack weight and where it is worn.
