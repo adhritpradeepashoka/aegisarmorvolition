@@ -1,8 +1,50 @@
-> **Note:** `test-files/` is the old v12 set. Current parts are in `cad/` (generator in `generator/`).
-
 # Aegis Armor (Black Carapace + Aegis)
 
 Hack Club **Fallen** submission by Adhrit Pradeep (Hack Club: adhrit2012).
+
+## Bill of materials
+
+Full file: [`bom.csv`](bom.csv). Prices in rupees, checked 16 Nov 2026; "est." means an estimate, not looked up. Notes and old sources are in [`docs/bom-notes.md`](docs/bom-notes.md).
+
+<!-- BOM:START -->
+| Item | Qty | Rs each | Store | Status |
+|---|---:|---:|---|---|
+| DS51150 servo, 12 V, 180 deg, single shaft | 1 | 6,999 | Probots | in stock 16 Nov |
+| Seeed XIAO ESP32-S3 | 1 | 0 | owned | owned |
+| Muscle BioAmp Candy board | 4 | 799 | Upside Down Labs | in stock 14 Nov; not at Robocraze |
+| BioAmp cable v3 50 cm (optional spare) | 1 | 249 | Upside Down Labs | not rechecked |
+| Gel electrodes x100 (optional) | 1 | 549 | Upside Down Labs | not rechecked |
+| Electrode gel (optional) | 1 | 199 | Upside Down Labs | not rechecked |
+| Steel thread 316L 2-ply 23 m | 2 | 1,060.82 | ThingBits | in stock 14 Nov |
+| Fusible TPU film or fabric paint + plain thread | 1 | 300 | local/Amazon | est. |
+| Snap studs, salvaged ECG studs x12 | 12 | 0 | owned | owned |
+| Conductive fabric (shield) | 1 | 300 | local/Amazon | est. |
+| Tight swim shirt / rash guard | 1 | 600 | local/Amazon | est. |
+| Tight stretchy arm sleeve | 1 | 300 | local/Amazon | est. |
+| 3S LiPo 11.1 V 2200 mAh 35C, XT60 | 1 | 1,600 | Robu | in stock 16 Nov; price est. (Robocraze 1971 sold out) |
+| LiPo balance charger iMax B6AC 80W | 1 | 2,351 | Robocraze | in stock 16 Nov |
+| LiPo charging bag + rigid pouch | 1 | 300 | local/Amazon | est. |
+| Buck LM2596 12 V to 5 V, 3 A | 1 | 48 | Robocraze | in stock 16 Nov |
+| Schottky diode 1N5819 (pack of 5) | 1 | 12 | Robocraze | SOLD OUT 16 Nov; find at Robu |
+| INA260 current/voltage sensor, 15 A, I2C | 1 | 619 | Robocraze | in stock 16 Nov |
+| TVS diode P6KE15A | 1 | 15 | Robu | est.; not at Robocraze |
+| Capacitor 1000 uF 25 V | 1 | 9 | Robocraze | in stock 16 Nov |
+| Relay 12 V 30 A T90 | 1 | 69 | Robocraze | listed 16 Nov; stock unconfirmed |
+| Flyback diode 1N4007 (pack of 10) | 1 | 15 | Robocraze | in stock 16 Nov |
+| E-stop 22 mm, 2 NC contacts | 1 | 67 | Quartz | not at Robocraze or Robu; contacts unconfirmed |
+| Blade fuse 10 A + inline holder | 1 | 100 | Probots | est.; not at Robocraze |
+| XT60 connector pair | 2 | 29 | Robocraze | in stock 16 Nov |
+| Silicone wire 14-16 AWG, 2 m | 1 | 250 | Robu | est.; not at Robocraze |
+| Silicone wire 22-24 AWG, 5 m | 1 | 120 | Robu | est.; not at Robocraze |
+| Level shifter BSS138 4-ch (optional) | 1 | 31 | Robocraze | listed 16 Nov; stock unconfirmed |
+| Elbow angle pot 10k (optional) | 1 | 40 | Robocraze | est. |
+| Velcro 25 mm + zip ties | 1 | 150 | local/Amazon | est. |
+| M4 inserts, M4 screws, M5 bolts + nyloc | 1 | 300 | local hardware | est. |
+| PETG filament | 1 | 0 | owned | owned |
+| **TOTAL (all rows)** | | **20,967.64** | | of which est. 4375 |
+<!-- BOM:END -->
+
+> **Note:** `test-files/` is the old v12 set. Current parts are in `cad/` (generator in `generator/`).
 
 A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
