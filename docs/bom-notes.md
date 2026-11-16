@@ -4,6 +4,8 @@
 
 Rules to keep in mind (from the Fallen rules as understood): parts you should design yourself (brackets, mounts, frames) should be designed, not bought as modules/kits. Check with Hack Club whether the Muscle BioAmp Candy boards count as acceptable components for this project.
 
+**Currency:** `bom.csv` and the README table are in US dollars (about 95 INR per USD). The notes in this file, including the old per-row notes below, keep the Indian rupee (INR) figures as originally seen.
+
 Prices marked "est." in the status column are estimates, not looked up. Parts the builder already owns are 0. On 16 Nov the electronics were moved to Robu and Robocraze where they were in stock; the servo, Candy boards and steel thread stay with their special suppliers.
 
 Design decisions reflected in the BOM:
@@ -17,7 +19,7 @@ Design decisions reflected in the BOM:
 
 Rows that had no link now name a dealer. The e-stop (Probots), rash guard and arm sleeve (Decathlon) and the Robocraze LiPo price were read from the product pages; the Robu, Amazon.in, Flipkart, element14 and fastdep prices come from search listings and may be out of date. Stock was not confirmed for them.
 
-- **Conductive shield fabric:** no reputable small-cut Indian source was found (an import listing is about Rs 3,500), so the build skips it and relies on short twisted leads.
+- **Conductive shield fabric:** removed from the BOM (no link, no cost). No reputable small-cut Indian source was found (an import listing is about Rs 3,500), so the build skips it and relies on short twisted leads.
 - **M4 steel screws:** no online assortment found; buy loose socket screws locally.
 - **Trace insulation:** no fusible TPU film found; fabric paint plus iron-on interfacing from a tailoring shop is the substitute.
 - **TVS diode:** a full 3S pack at 12.6 V is only 0.2 V under the P6KE15A's 12.8 V standoff. A P6KE18A (15.3 V standoff) leaves more headroom.

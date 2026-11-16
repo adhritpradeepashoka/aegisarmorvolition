@@ -13,7 +13,7 @@ def money(v):
     return f"{f:,.0f}" if f == int(f) else f"{f:,.2f}"
 
 rows = list(csv.reader(open("bom.csv", newline="")))[1:]
-lines = ["| Item | Qty | Rs each | Store | Status | Link |", "|---|---:|---:|---|---|---|"]
+lines = ["| Item | Qty | USD each | Store | Status | Link |", "|---|---:|---:|---|---|---|"]
 for item, qty, price, store, status, link in rows:
     if item.startswith("TOTAL"):
         lines.append(f"| **{item}** | | **{money(price)}** | | {status} | |")
