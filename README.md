@@ -103,7 +103,6 @@ Parts only, then the elbow at 90 degrees:
 | Folder | What goes there |
 |---|---|
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
-| `journal/` | Photos and notes that go with your Fallen journal entries. |
 | `docs/` | Design notes, safety notes, measurements. |
 | `cad/`, `generator/` | Full-size part files and the script that makes them. |
 | `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
