@@ -1,6 +1,6 @@
-# FreeCAD source files for the reference parts
+# FreeCAD source files for the parts
 
-One `.FCStd` file per part, matching the STL files in `../stl/` (same names, same coordinates: elbow axis = X through the origin, +X = outer side of the right arm, +Z = toward the shoulder, +Y = forward, millimetres). These are reference geometry, not my own CAD.
+One `.FCStd` file per part, matching the STL files in `../stl/` (same names, same coordinates: elbow axis = X through the origin, +X = outer side of the right arm, +Z = toward the shoulder, +Y = forward, millimetres). 
 
 - **Editable:** each file is a tree of Part workbench features (Box, Cylinder, Sphere, Polygon + Revolution, Offset, Union, Cut, Intersection). Select any feature in the tree, change its size or placement in the Property view, and press Recompute. The final solid is the top object, named after the part (for example `LinkPlate`).
 - **Rounded blocks** are a plain box (or a convex hull, for the tapered stops) with a `Part::Offset` on top; the offset `Value` is the corner radius.
