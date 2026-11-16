@@ -13,6 +13,17 @@ Design decisions reflected in the BOM:
 - Power parts are a proposal; see `power.md`. Prices were seen on 14 Nov 2026 and change; blank cells were not checked.
 - All 4 Candy boards sit on the chest plate with the rest of the electronics; the electrode threads run through the garment, and the cables clip onto studs at the chest so the garment can be washed. See `garment.md`.
 
+## Dealer research, 16 Nov 2026
+
+Rows that had no link now name a dealer. The e-stop (Probots), rash guard and arm sleeve (Decathlon) and the Robocraze LiPo price were read from the product pages; the Robu, Amazon.in, Flipkart, element14 and fastdep prices come from search listings and may be out of date. Stock was not confirmed for them.
+
+- **Conductive shield fabric:** no reputable small-cut Indian source was found (an import listing is about Rs 3,500), so the build skips it and relies on short twisted leads.
+- **M4 steel screws:** no online assortment found; buy loose socket screws locally.
+- **Trace insulation:** no fusible TPU film found; fabric paint plus iron-on interfacing from a tailoring shop is the substitute.
+- **TVS diode:** a full 3S pack at 12.6 V is only 0.2 V under the P6KE15A's 12.8 V standoff. A P6KE18A (15.3 V standoff) leaves more headroom.
+- **Fuse kit:** takes mini blade fuses, not standard ATO.
+- **LiPo:** listings disagree on stock; Robodo lists the same pack at Rs 1,632. The wearable pack is held in the charging bag; a metal box from a hardware shop works as the rigid case.
+
 ## Per-row notes moved out of bom.csv (16 Nov 2026)
 
 Old per-row notes and sources, kept word for word. The current prices and stock are in `bom.csv`.

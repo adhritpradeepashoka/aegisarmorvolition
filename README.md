@@ -4,7 +4,7 @@ Hack Club **Fallen** submission by Adhrit Pradeep (Hack Club: adhrit2012).
 
 ## Bill of materials
 
-Full file: [`bom.csv`](bom.csv). Prices in rupees, checked 16 Nov 2026; "est." means an estimate, not looked up. Notes and old sources are in [`docs/bom-notes.md`](docs/bom-notes.md).
+Full file: [`bom.csv`](bom.csv). Prices in rupees, as listed on 16 Nov 2026 (only a few were read from the live product page, so re-check before buying); "est." means an estimate, not looked up. Notes and old sources are in [`docs/bom-notes.md`](docs/bom-notes.md).
 
 <!-- BOM:START -->
 | Item | Qty | Rs each | Store | Status | Link |
@@ -13,30 +13,34 @@ Full file: [`bom.csv`](bom.csv). Prices in rupees, checked 16 Nov 2026; "est." m
 | Seeed XIAO ESP32-S3 | 1 | 0 | owned | owned | [link](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) |
 | Muscle BioAmp Candy board | 4 | 799 | Upside Down Labs | in stock 16 Nov (21 listed); not at Robocraze | [link](https://store.upsidedownlabs.tech/product/muscle-bioamp-candy/) |
 | Steel thread 316L 2-ply 23 m | 2 | 1,060.82 | ThingBits | in stock 14 Nov | [link](https://thingbits.in/products/stainless-conductive-thread) |
-| Fusible TPU film or fabric paint + plain thread | 1 | 300 | local/Amazon | est.; no link yet | none yet |
+| Fabric paint (Fevicryl) + fusing/iron-on interfacing + plain thread | 1 | 300 | Amazon.in / local tailoring shop | est.; Fevicryl 10 ml listed Rs 73; fusing and thread bought locally | [link](https://www.amazon.in/Fabric-Colour-Pack-10ml-Colours/dp/B07Z1X5ZT2) |
 | Snap studs, salvaged ECG studs x12 | 12 | 0 | owned | owned | owned |
-| Conductive fabric (shield) | 1 | 300 | local/Amazon | est.; no link yet | none yet |
-| Tight swim shirt / rash guard | 1 | 600 | local/Amazon | est.; no link yet | none yet |
-| Tight stretchy arm sleeve | 1 | 300 | local/Amazon | est.; no link yet | none yet |
-| 3S LiPo 11.1 V 2200 mAh 35C, XT60 | 1 | 2,139 | Robocraze | listing conflicts (in stock at 2139 / sold out at 1971 on 16 Nov); recheck | [link](https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery) |
+| Conductive fabric (shield), skipped | 0 | 0 | none | skipped: no small-cut source found (import listing about Rs 3,500); use short twisted leads instead | none yet |
+| Tight swim shirt / rash guard (Olaian UV 100, long sleeve) | 1 | 999 | Decathlon | price read from page 16 Nov; try on in store | [link](https://www.decathlon.in/p/8611954/men-surfing-uv-rash-guard-100-long-sleeved-grey) |
+| Tight stretchy arm sleeve (Kiprun UV) | 1 | 299 | Decathlon | price read from page 16 Nov | [link](https://www.decathlon.in/p/8600763/uv-protected-arm-and-hand-sleeves-running-black) |
+| 3S LiPo 11.1 V 2200 mAh 35C, XT60 | 1 | 2,139 | Robocraze | page price 2139 on 16 Nov; stock listings conflict, recheck; Robodo lists it at 1632 | [link](https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery) |
 | LiPo balance charger iMax B6AC 80W | 1 | 2,351 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/imax-b6ac-smart-balance-charger-80w) |
-| LiPo charging bag + rigid pouch | 1 | 300 | local/Amazon | est.; no link yet | none yet |
+| LiPo charging bag 215x45x165 mm | 1 | 479 | Robu | listed 16 Nov 2026, not re-checked; price may change | [link](https://robu.in/product/lithium-battery-explosion-proof-bag-protection-3/) |
 | Buck LM2596 12 V to 5 V, 3 A | 1 | 62 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/lm2596-dc-dc-buck-module) |
 | Schottky diode 1N5819 (DO-41) | 1 | 7 | Robu | in stock (seen on listing) | [link](https://robu.in/product/1n5819-mdd-40v-600mv1a-1a-do-41-schottky-diodes-rohs/) |
 | INA260 current/voltage sensor, 15 A, I2C | 1 | 619 | Robocraze | in stock 16 Nov (1 left) | [link](https://robocraze.com/products/ina260-voltage-current-power-sensor-breakout-with-i2c-interface-7semi) |
-| TVS diode P6KE15A | 1 | 15 | Robu | est.; no link yet | none yet |
+| TVS diode P6KE15A (P6KE18A gives more headroom on a full 12.6 V pack) | 1 | 85.05 | element14 India | listed 16 Nov 2026, not re-checked; price may change | [link](https://in.element14.com/multicomp/p6ke15a/diode-tvs-15v-600w/dp/1578809) |
 | Capacitor 1000 uF 25 V | 1 | 9 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/1000uf-25v-electrolytic-capacitor-through-hole-dip) |
 | Relay 12 V 30 A T90 | 1 | 69 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/12v-30a-t90-relay) |
 | Flyback diode 1N4007 (pack of 10) | 1 | 15 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/1n4007-diode-pack-of-10) |
-| E-stop 22 mm, 2 NC contacts | 1 | 67 | SP Road (local) | est.; check contacts when buying | none yet |
-| Blade fuse 10 A + inline holder | 1 | 100 | SP Road (local) | est.; Probots holder listing is out of stock and Rs 1,499 | none yet |
+| E-stop 22 mm, 2-pole, twist-release (ProMax) | 1 | 899 | Probots | in stock, pickup in Bangalore 16 Nov; confirm 2 NC on the switch body | [link](https://probots.co.in/promax-22mm-emergency-stop-switch-mushroom-head-waterproof-metal-2-pole.html) |
+| Mini blade fuse 10 A + inline holder (5 fuses + holder kit) | 1 | 239.20 | Flipkart / Amazon.in | listed 16 Nov 2026, not re-checked; price may change; takes mini blades | [link](https://www.flipkart.com/pbros-5-pieces-10-amp-mini-blade-fuse-1-pcs-inline-holder-waterproof-line-electrical/p/itmeb1bac62dd289) |
 | XT60 connector pair | 2 | 29 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/xt60-connector-pair) |
 | Silicone wire 14 AWG, 1 m red + 1 m black | 1 | 122 | Robu | Robu per-metre price (66 + 56); stock not checked | [link](https://robu.in/product/high-quality-ultra-flexible-14awg-silicone-wire-red/) |
-| Silicone wire 22-24 AWG, 5 m | 1 | 120 | Robu | est.; no link yet | none yet |
-| Velcro 25 mm + zip ties | 1 | 150 | local/Amazon | est.; no link yet | none yet |
-| M4 inserts, M4 screws, M5 bolts + nyloc | 1 | 300 | local hardware | est.; no link yet | none yet |
+| Silicone wire 22 AWG, 5 m | 1 | 90 | Robu | Robu per-metre price (18/m); stock not checked | [link](https://robu.in/product-category/batteries/wires-and-cables/silicone-wires/18-to-22-awg/) |
+| Velcro strap 25 mm (Bonzella, 5 m) | 1 | 299 | Amazon.in | listed 16 Nov 2026, not re-checked; price may change | [link](https://www.amazon.in/Bonzella-Adjustable-Organizer-Reusable-Securing/dp/B0FQWHWMJW) |
+| Nylon zip ties 200 mm (pack of 100) | 1 | 72 | Robu | listed 16 Nov 2026, not re-checked; price may change | [link](https://robu.in/product/nylon-cable-zip-ties-200-mm-white-100pcs/) |
+| M4x6 brass heat-set inserts (25) | 1 | 113 | Robu | listed 16 Nov 2026, not re-checked; price may change | [link](https://robu.in/product/m4-x-6-mm-brass-heat-set-threaded-round-insert-nut-25-pcs/) |
+| M4 steel socket screws, assorted | 1 | 100 | SP Road / local fastener shop | est.; no online steel M4 assortment found | none yet |
+| M5 bolt set 20 mm (20) | 1 | 72 | Robu | listed 16 Nov 2026, not re-checked; price may change | [link](https://robu.in/product/easymech-m5-x-20mm-chhd-bolt-nut-and-washer-set-20pcs/) |
+| M5 nyloc nuts (25) | 1 | 35 | fastdep.in | listed 16 Nov 2026, not re-checked; price may change | [link](https://www.fastdep.in/product/nyloc-nut-m5/) |
 | PETG filament | 1 | 0 | owned | owned | owned |
-| **TOTAL (all rows)** | | **20,319.64** | | of which est. 2552 | |
+| **TOTAL (all rows)** | | **21,848.89** | | of which est. 400 | |
 <!-- BOM:END -->
 
 > **Note:** `test-files/` is the old v12 set. The part files in `cad/` are reference geometry.
@@ -54,10 +58,6 @@ I've been passionate about brain-computer and body-computer interfaces for a lon
 - **To look at it:** open the interactive simulator (enable GitHub Pages, then visit `/sim/`). Drag the target angle, load the arm, change the supply voltage and torque limit, show or hide the wrist and the chest support, and press *Kill (e-stop)*.
 - **Garment status:** the garment is not built yet. The plan (4 Candy boards on the chest plate, steel-thread electrode traces running through a tight shirt to the chest, tested on both a sleeve and a full shirt, with the noise to be characterised on the bench) is in `docs/garment.md`.
 - **To read the parts:** `cad/` holds the 3D files (`cad/freecad/` editable source, `cad/stl/` STL files, `cad/old_steps/` older STEP files), `docs/wiring.md` the wiring.
-
-## Why I made it
-
-I have a passion for brain-computer interfaces and I'm a fan of Warhammer 40k, to some extent. I always wanted a flexible interface suit that could assist me. I had the idea for a while, and when Fallen came up I decided to use the opportunity to at least design and implement it.
 
 ## Screenshots
 
@@ -102,7 +102,7 @@ Parts only, then the elbow at 90 degrees:
 | `cad/stl/` | STL files of the reference parts. Reference geometry, not my own CAD. |
 | `cad/old_steps/` | Older STEP files converted from the STL meshes (not editable by dimension). |
 | `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
-| `test-files/` | Placeholder STLs used only for testing in CircuitBench. See note below. |
+| `test-files/` | Placeholder STLs used only for testing in CircuitBench. see the note above. |
 | `bom.csv` | Bill of materials (provisional, see `docs/bom-notes.md`). |
 
 ## Safety
