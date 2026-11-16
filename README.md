@@ -101,7 +101,7 @@ Parts only, then the elbow at 90 degrees:
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `docs/` | Design notes, safety notes, measurements. |
 | `cad/freecad/` | **Editable FreeCAD source** (`.FCStd`) for every part, plus proper STEP exports in `cad/freecad/step/`. See `cad/freecad/README.md`. |
-| `cad/stl/` | STL files of the individual parts, along with assembled-view preview meshes showing their relative positions and arrangement. |
+| `cad/stl/` | STL files of the individual parts, plus assembly preview meshes. |
 | `cad/old_steps/` | Older STEP files converted from the STL meshes (not editable by dimension). |
 | `sim/` | Interactive physics simulation of the elbow, with torso and limb visuals providing body-position context around the mechanism. |
 | `test-files/` | Placeholder STLs used only for testing in CircuitBench. see the note above. |

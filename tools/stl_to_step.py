@@ -2,7 +2,7 @@
 
 Mesh-derived: faces are triangles (coplanar ones merged), so these are NOT
 parametric models. Run from the repo root: python3 tools/stl_to_step.py
-Skips the large *_REFERENCE assembly previews (their parts are converted one by one).
+Skips the large * assembly previews (their parts are converted one by one).
 Needs: pip install cadquery-ocp
 """
 import glob, os

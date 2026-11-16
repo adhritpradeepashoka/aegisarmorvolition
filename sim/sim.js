@@ -41,7 +41,7 @@ const grid = new THREE.GridHelper(800, 40, 0x2a313c, 0x1a1f27); grid.rotation.x 
 // kinematic chain (assembly frame, mm): chest (fixed) -> abduction about the yoke's Y pin -> shoulder flexion about the strut's X bolt -> arm module
 const PIN = new THREE.Vector3(73.2, 0, 312);      // yoke pin (Y axis), from make_aegis_v13.py: bxc, zs+22
 const SHB = new THREE.Vector3(73.2, 0, 290);      // shoulder bolt (X axis): bxc, zs
-const chestGroup = new THREE.Group(); scene.add(chestGroup);            // yoke, chest plate, torso reference (fixed to the wearer's chest)
+const chestGroup = new THREE.Group(); scene.add(chestGroup);            // yoke, chest plate, torso model (fixed to the wearer's chest)
 const abdGroup = new THREE.Group(); abdGroup.position.copy(PIN); scene.add(abdGroup);
 const blockGroup = new THREE.Group(); blockGroup.position.copy(PIN).negate(); abdGroup.add(blockGroup);   // gimbal block
 const shoGroup = new THREE.Group(); shoGroup.position.copy(SHB).sub(PIN); abdGroup.add(shoGroup);
@@ -83,7 +83,7 @@ addSTL('./stl/16_chest_yoke_arch.stl', chestGroup, yokeMat);
 // the plate file is a print-frame copy of the plate: sits on the torso axis at x=-165, z=115 in the assembly frame (CHEST_AXIS_X, CHEST_PLATE_Z0)
 const plateGroup = new THREE.Group(); plateGroup.position.set(-165, 0, 115); chestGroup.add(plateGroup);
 addSTL('./stl/06_chest_plate_RIGHT_ARM.stl', plateGroup, plateMat);
-addSTL('./stl/17_BODY_REFERENCE_torso_not_printable.stl', chestGroup, torsoMat);
+addSTL('./stl/17_BODY_torso_not_printable.stl', chestGroup, torsoMat);
 addSTL('./stl/01_upper_saddle.stl', fixedGroup, upperMat);
 addSTL('./stl/05_servo_placeholder.stl', fixedGroup, servoMat);
 addSTL('./stl/03_link_plate.stl', movingGroup, moveMat);
@@ -92,13 +92,13 @@ addSTL('./stl/02B_forearm_bar.stl', movingGroup, moveMat, 'bar');
 function applyForearmChoice() {
   for (const k in forearmMeshes) forearmMeshes[k].visible = (k === P.fore);
 }
-// translucent reference limbs
+// translucent limbs
 const limbMat = mat(0x8899aa, 0.10);
 const upperArm = new THREE.Mesh(new THREE.CylinderGeometry(38, 38, 290, 32), limbMat);
 upperArm.rotation.x = Math.PI / 2; upperArm.position.z = 145; fixedGroup.add(upperArm);
 let foreLimb = new THREE.Mesh(new THREE.CylinderGeometry(36, 27, 250, 32), limbMat);   // elbow end r36, wrist end r27 (forearm tapers)
 foreLimb.rotation.x = Math.PI / 2; foreLimb.position.z = -125; movingGroup.add(foreLimb);
-// reference hand (right hand, palm toward -Y, back of hand toward +Y where the dorsal plate sits; thumb on the -X side). z=0 is the wrist pin.
+// hand model (right hand, palm toward -Y, back of hand toward +Y where the dorsal plate sits; thumb on the -X side). z=0 is the wrist pin.
 const skinMat = mat(0xd9a98a, 0.35);
 const handShape = new THREE.Group(); handRef.add(handShape);
 const palm = new THREE.Mesh(new THREE.BoxGeometry(80, 26, 100), skinMat); palm.position.set(0, 0, -50); handShape.add(palm);
