@@ -39,7 +39,7 @@ Full file: [`bom.csv`](bom.csv). Prices in rupees, checked 16 Nov 2026; "est." m
 | **TOTAL (all rows)** | | **20,319.64** | | of which est. 2552 | |
 <!-- BOM:END -->
 
-> **Note:** `test-files/` is the old v12 set. Current parts are in `cad/` (generator in `generator/`).
+> **Note:** `test-files/` is the old v12 set. The part files in `cad/` and `generator/` are reference geometry.
 
 A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
@@ -99,7 +99,7 @@ Parts only, then the elbow at 90 degrees:
 |---|---|
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `docs/` | Design notes, safety notes, measurements. |
-| `cad/`, `generator/` | Full-size part files and the script that makes them. |
+| `cad/`, `generator/` | Reference part files (STL) and the script that makes them. Reference geometry, not my own CAD. |
 | `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
 | `test-files/` | Placeholder STLs used only for testing in CircuitBench. See note below. |
 | `bom.csv` | Bill of materials (provisional, see `docs/bom-notes.md`). |
