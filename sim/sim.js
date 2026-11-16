@@ -178,7 +178,7 @@ function shoulderTorque(th, ph = S.ph) {
 const inertia = () => masses().reduce((s, [m, d]) => s + m * d * d, 0) + J_EXTRA;
 const wInertia = () => P.mh * (0.40 * P.lh) ** 2 + P.pay * (0.50 * P.lh) ** 2 + 0.0008;   // hand + payload about the wrist pin, + hand piece (assumed 0.0008)
 
-// ---- wrist linkage (planar, y,z): hand angle ph -> crank angle al. Same solution as the generator (kinematics()).
+// ---- wrist linkage (planar, y,z): hand angle ph -> crank angle al. Planar linkage solution.
 const WSTALL = { '10': 10, '20': 20, '25': 25 };            // kg*cm, ASSUMED servo class (placeholder body 40.7 x 19.7 x 42.9 mm)
 const WLO = -55 * D2R, WHI = 45 * D2R;                       // hand-piece arc-slot stops
 function crankAngle(ph, prev) {
