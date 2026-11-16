@@ -99,7 +99,7 @@ Parts only, then the elbow at 90 degrees:
 |---|---|
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `docs/` | Design notes, safety notes, measurements. |
-| `cad/`, `generator/` | Reference part files (STL) and the script that makes them. Reference geometry, not my own CAD. |
+| `cad/`, `cad/step/`, `generator/` | Reference part files (STL, plus STEP conversions in `cad/step/`) and the script that makes them. Reference geometry, not my own CAD. |
 | `sim/` | Interactive physics simulation of the elbow (open `sim/index.html` through a web server, or enable GitHub Pages and visit `/sim/`). |
 | `test-files/` | Placeholder STLs used only for testing in CircuitBench. See note below. |
 | `bom.csv` | Bill of materials (provisional, see `docs/bom-notes.md`). |
