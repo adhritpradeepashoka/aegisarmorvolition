@@ -1,34 +1,29 @@
-item,qty,inr_each,store,status
-"DS51150 servo, 12 V, 180 deg, single shaft",1,6999,Probots,in stock 16 Nov
-Seeed XIAO ESP32-S3,1,0,owned,owned
-Muscle BioAmp Candy board,4,799,Upside Down Labs,in stock 14 Nov; not at Robocraze
-BioAmp cable v3 50 cm (optional spare),1,249,Upside Down Labs,not rechecked
-Gel electrodes x100 (optional),1,549,Upside Down Labs,not rechecked
-Electrode gel (optional),1,199,Upside Down Labs,not rechecked
-Steel thread 316L 2-ply 23 m,2,1060.82,ThingBits,in stock 14 Nov
-Fusible TPU film or fabric paint + plain thread,1,300,local/Amazon,est.
-"Snap studs, salvaged ECG studs x12",12,0,owned,owned
-Conductive fabric (shield),1,300,local/Amazon,est.
-Tight swim shirt / rash guard,1,600,local/Amazon,est.
-Tight stretchy arm sleeve,1,300,local/Amazon,est.
-"3S LiPo 11.1 V 2200 mAh 35C, XT60",1,1600,Robu,in stock 16 Nov; price est. (Robocraze 1971 sold out)
-LiPo balance charger iMax B6AC 80W,1,2351,Robocraze,in stock 16 Nov
-LiPo charging bag + rigid pouch,1,300,local/Amazon,est.
-"Buck LM2596 12 V to 5 V, 3 A",1,48,Robocraze,in stock 16 Nov
-Schottky diode 1N5819 (pack of 5),1,12,Robocraze,SOLD OUT 16 Nov; find at Robu
-"INA260 current/voltage sensor, 15 A, I2C",1,619,Robocraze,in stock 16 Nov
-TVS diode P6KE15A,1,15,Robu,est.; not at Robocraze
-Capacitor 1000 uF 25 V,1,9,Robocraze,in stock 16 Nov
-Relay 12 V 30 A T90,1,69,Robocraze,listed 16 Nov; stock unconfirmed
-Flyback diode 1N4007 (pack of 10),1,15,Robocraze,in stock 16 Nov
-"E-stop 22 mm, 2 NC contacts",1,67,Quartz,not at Robocraze or Robu; contacts unconfirmed
-Blade fuse 10 A + inline holder,1,100,Probots,est.; not at Robocraze
-XT60 connector pair,2,29,Robocraze,in stock 16 Nov
-"Silicone wire 14-16 AWG, 2 m",1,250,Robu,est.; not at Robocraze
-"Silicone wire 22-24 AWG, 5 m",1,120,Robu,est.; not at Robocraze
-Level shifter BSS138 4-ch (optional),1,31,Robocraze,listed 16 Nov; stock unconfirmed
-Elbow angle pot 10k (optional),1,40,Robocraze,est.
-Velcro 25 mm + zip ties,1,150,local/Amazon,est.
-"M4 inserts, M4 screws, M5 bolts + nyloc",1,300,local hardware,est.
-PETG filament,1,0,owned,owned
-TOTAL (all rows),,20967.64,,of which est. 4375
+item,qty,inr_each,store,status,link
+"DS51150 servo, 12 V, 180 deg, single shaft",1,6999,Probots,in stock 16 Nov,https://probots.co.in/ds51150-150kg-180-degrees-high-torque-servo-ip65.html
+Seeed XIAO ESP32-S3,1,0,owned,owned,https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html
+Muscle BioAmp Candy board,4,799,Upside Down Labs,in stock 16 Nov (21 listed); not at Robocraze,https://store.upsidedownlabs.tech/product/muscle-bioamp-candy/
+Steel thread 316L 2-ply 23 m,2,1060.82,ThingBits,in stock 14 Nov,https://thingbits.in/products/stainless-conductive-thread
+Fusible TPU film or fabric paint + plain thread,1,300,local/Amazon,est.; no link yet,
+"Snap studs, salvaged ECG studs x12",12,0,owned,owned,owned
+Conductive fabric (shield),1,300,local/Amazon,est.; no link yet,
+Tight swim shirt / rash guard,1,600,local/Amazon,est.; no link yet,
+Tight stretchy arm sleeve,1,300,local/Amazon,est.; no link yet,
+"3S LiPo 11.1 V 2200 mAh 35C, XT60",1,2139,Robocraze,listing conflicts (in stock at 2139 / sold out at 1971 on 16 Nov); recheck,https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery
+LiPo balance charger iMax B6AC 80W,1,2351,Robocraze,in stock 16 Nov,https://robocraze.com/products/imax-b6ac-smart-balance-charger-80w
+LiPo charging bag + rigid pouch,1,300,local/Amazon,est.; no link yet,
+"Buck LM2596 12 V to 5 V, 3 A",1,62,Robocraze,in stock 16 Nov,https://robocraze.com/products/lm2596-dc-dc-buck-module
+Schottky diode 1N5819 (DO-41),1,7,Robu,in stock (seen on listing),https://robu.in/product/1n5819-mdd-40v-600mv1a-1a-do-41-schottky-diodes-rohs/
+"INA260 current/voltage sensor, 15 A, I2C",1,619,Robocraze,in stock 16 Nov (1 left),https://robocraze.com/products/ina260-voltage-current-power-sensor-breakout-with-i2c-interface-7semi
+TVS diode P6KE15A,1,15,Robu,est.; no link yet,
+Capacitor 1000 uF 25 V,1,9,Robocraze,in stock 16 Nov,https://robocraze.com/products/1000uf-25v-electrolytic-capacitor-through-hole-dip
+Relay 12 V 30 A T90,1,69,Robocraze,in stock 16 Nov,https://robocraze.com/products/12v-30a-t90-relay
+Flyback diode 1N4007 (pack of 10),1,15,Robocraze,in stock 16 Nov,https://robocraze.com/products/1n4007-diode-pack-of-10
+"E-stop 22 mm, 2 NC contacts",1,67,SP Road (local),est.; check contacts when buying,
+Blade fuse 10 A + inline holder,1,100,SP Road (local),"est.; Probots holder listing is out of stock and Rs 1,499",
+XT60 connector pair,2,29,Robocraze,in stock 16 Nov,https://robocraze.com/products/xt60-connector-pair
+"Silicone wire 14 AWG, 1 m red + 1 m black",1,122,Robu,Robu per-metre price (66 + 56); stock not checked,https://robu.in/product/high-quality-ultra-flexible-14awg-silicone-wire-red/
+"Silicone wire 22-24 AWG, 5 m",1,120,Robu,est.; no link yet,
+Velcro 25 mm + zip ties,1,150,local/Amazon,est.; no link yet,
+"M4 inserts, M4 screws, M5 bolts + nyloc",1,300,local hardware,est.; no link yet,
+PETG filament,1,0,owned,owned,owned
+TOTAL (all rows),,20319.64,,of which est. 2552,
