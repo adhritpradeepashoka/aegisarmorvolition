@@ -7,7 +7,8 @@ Hack Club **Fallen** submission by Adhrit Pradeep (Hack Club: adhrit2012).
 A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-thread electrodes on a tight full-sleeved shirt, read by Upside Down Labs Muscle BioAmp Candy boards) driving a **servo elbow exoskeleton** ("Aegis": DS51150 servo at the elbow, optional wrist joint, chest support). Related to the Volition / NPG Lite project.
 
 > **Status: early. Nothing here is a finished or tested design yet.**
-> TODO (Adhrit): replace this paragraph with your own description of what you are building and why.
+
+I've been passionate about brain-computer and body-computer interfaces for a long time, and I'm a fan of Warhammer 40k, especially its tech. The Black Carapace, the interface space marines use to control their power armor, is the thing I've most wanted to build my own version of. It's a project I kept putting off, and Fallen gave me the push to start. This is my version: a tight full-sleeved shirt with steel-thread electrodes that reads my muscle signals (Black Carapace), driving a servo elbow exoskeleton for my right arm (Aegis).
 
 ## What it is and how to use it
 
@@ -29,7 +30,7 @@ Arm, chest support, an older wrist module (not part of the current build) and bo
 ![Full 3D assembly in the simulator](docs/images/sim-full-assembly.png)
 
 ### PCB
-No custom PCB in this build: the electronics are Upside Down Labs boards (Muscle BioAmp Candy x4) and a Seeed XIAO ESP32-S3 controller. TODO (Adhrit): confirm, or add your own board here.
+No custom PCB in this build: the electronics are Upside Down Labs boards (Muscle BioAmp Candy x4) and a Seeed XIAO ESP32-S3 controller.
 
 ### Schematic / wiring diagram
 Made in CircuitBench (concept diagram, stand-in parts, see `docs/wiring.md` for what each stand-in means):
