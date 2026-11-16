@@ -11,11 +11,11 @@ This page was updated after research on 14 Nov 2026. Nothing here has been built
 
 ## Proposed architecture
 - **Pack:** 3S LiPo drone pack, 11.1 V 2200 mAh 35C (about 24 Wh), with an XT60 plug and a JST-XH balance lead. Chosen on 16 Nov 2026 over a 3S 18650 pack to avoid cell holders and spot welding. 35C is far above the servo's stall current. Weight is probably about 140 to 190 g; weigh the real pack.
-- **Protection (no BMS, drone LiPos have none):** charge only with a balance charger; 10 A fuse in the pack + line; a firmware low-voltage cutoff using the INA226 bus voltage (plan: about 3.3 V per cell, i.e. about 10 V, filtered so servo sag does not trip it; tune on the bench). Keep the pack in a rigid case on the chest plate, away from the arm joint; never charge it unattended; stop using it if it puffs or is dented. If you ever switch back to cylindrical cells, add a 3S BMS then.
+- **Protection (no BMS, drone LiPos have none):** charge only with a balance charger; 10 A fuse in the pack + line; a firmware low-voltage cutoff using the INA260 bus voltage (plan: about 3.3 V per cell, i.e. about 10 V, filtered so servo sag does not trip it; tune on the bench). Keep the pack in a rigid case on the chest plate, away from the arm joint; never charge it unattended; stop using it if it puffs or is dented. If you ever switch back to cylindrical cells, add a 3S BMS then.
 - **Fuse:** 10 A blade fuse in the pack + line.
 - **Voltage headroom problem:** a full 3S pack is 12.6 V, which is the servo's maximum, and back-driving the elbow can push the bus higher. Options: a TVS diode (about 15 V, check its clamp voltage) and a 470 uF+ low-ESR capacitor at the servo, or charge only to about 12.3 V with an adjustable charger. A 3S LiFePO4 pack would give headroom (about 10.8 V full, standard chemistry figures, not checked) at the cost of torque.
-- **Servo power path:** pack + -> fuse -> relay contacts -> INA226 shunt -> DS51150 V+. The XIAO and the Candy boards are not powered from this path.
-- **Logic power:** 12 V to 5 V buck -> Schottky diode -> XIAO 5V pin (the 5V pin accepts external power only through a diode). Candy boards and the INA226 run from the XIAO 3V3 pin, which can supply about 700 mA.
+- **Servo power path:** pack + -> fuse -> relay contacts -> INA260 (its built-in 2 mOhm shunt, in series) -> DS51150 V+. The XIAO and the Candy boards are not powered from this path.
+- **Logic power:** 12 V to 5 V buck -> Schottky diode -> XIAO 5V pin (the 5V pin accepts external power only through a diode). Candy boards and the INA260 run from the XIAO 3V3 pin, which can supply about 700 mA.
 - **Common ground** between the battery, servo, buck converter and XIAO.
 
 ## E-stop
@@ -26,11 +26,11 @@ This page was updated after research on 14 Nov 2026. Nothing here has been built
 
 ## Current sensing
 - The stock INA219 module (0.1 ohm shunt) saturates near 3.2 A and would dissipate about 6.4 W at 8 A. Any limit set above about 3.2 A does not work with it.
-- Use an INA226 (36 V bus, 81.92 mV shunt range) with a 5 mOhm, 1%, 1 to 2 W Kelvin shunt: 16.4 A full scale, 41.5 mV at 8.3 A.
-- Firmware port needed (libraries: Rob Tillaart INA226 or INA226_WE).
+- Use an INA260 (Robocraze, 7Semi breakout): 36 V bus, 15 A continuous, built-in 2 mOhm shunt, so no external shunt is needed. At 8.3 A stall it reads about 8.3 A and dissipates about 0.14 W. Current resolution is about 1.25 mA.
+- Firmware port needed (library: Adafruit INA260). Put the sensor in the + line: pack side to IN+, servo side to IN-, and tie VBUS to the servo side to read the bus voltage.
 
 ## XIAO ESP32-S3 pin plan (from the 14 Nov 2026 research; verify against the Seeed pinout before wiring)
-- EMG inputs on A0, A1, A3, A8 (ADC1, so Wi-Fi/BLE do not conflict). INA226 on D4 (SDA) and D5 (SCL). Servo PWM on D9. E-stop input on D10.
+- EMG inputs on A0, A1, A3, A8 (ADC1, so Wi-Fi/BLE do not conflict). INA260 on D4 (SDA) and D5 (SCL). Servo PWM on D9. E-stop input on D10.
 - Avoid D2 (strapping pin) and D6/D7 (UART0) for the servo or e-stop. The current sketch uses Arduino-style pin numbers (servo 9, e-stop 2) that need remapping in the port.
 - ESP32Servo: `setPeriodHertz(50)` and `attach(pin, 500, 2500)`.
 - If the servo is unreliable at a 3.3 V signal, buffer the signal to 5 V (single MOSFET stage or a 74AHCT-type buffer on the 5 V rail).
