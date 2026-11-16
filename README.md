@@ -17,7 +17,7 @@ Full file: [`bom.csv`](bom.csv). Prices in US dollars, converted from the Indian
 | Snap studs, salvaged ECG studs x12 | 12 | 0 | owned | owned | owned |
 | Tight swim shirt / rash guard (Olaian UV 100, long sleeve) | 1 | 10.52 | Decathlon | price read from page 16 Nov; try on in store | [link](https://www.decathlon.in/p/8611954/men-surfing-uv-rash-guard-100-long-sleeved-grey) |
 | Tight stretchy arm sleeve (Kiprun UV) | 1 | 3.15 | Decathlon | price read from page 16 Nov | [link](https://www.decathlon.in/p/8600763/uv-protected-arm-and-hand-sleeves-running-black) |
-| 3S LiPo 11.1 V 2200 mAh 35C, XT60 | 1 | 22.52 | Robocraze | page price 2139 on 16 Nov; stock listings conflict, recheck; Robodo lists it at $17.18 | [link](https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery) |
+| 3S LiPo 11.1 V 2200 mAh 35C, XT60 | 1 | 22.52 | Robocraze | page price $22.52 on 16 Nov; stock listings conflict, recheck; Robodo lists it at $17.18 | [link](https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery) |
 | LiPo balance charger iMax B6AC 80W | 1 | 24.75 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/imax-b6ac-smart-balance-charger-80w) |
 | LiPo charging bag 215x45x165 mm | 1 | 5.04 | Robu | listed 16 Nov 2026, not re-checked; price may change | [link](https://robu.in/product/lithium-battery-explosion-proof-bag-protection-3/) |
 | Buck LM2596 12 V to 5 V, 3 A | 1 | 0.65 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/lm2596-dc-dc-buck-module) |
@@ -30,7 +30,7 @@ Full file: [`bom.csv`](bom.csv). Prices in US dollars, converted from the Indian
 | E-stop 22 mm, 2-pole, twist-release (ProMax) | 1 | 9.46 | Probots | in stock, pickup in Bangalore 16 Nov; confirm 2 NC on the switch body | [link](https://probots.co.in/promax-22mm-emergency-stop-switch-mushroom-head-waterproof-metal-2-pole.html) |
 | Mini blade fuse 10 A + inline holder (5 fuses + holder kit) | 1 | 2.52 | Flipkart / Amazon.in | listed 16 Nov 2026, not re-checked; price may change; takes mini blades | [link](https://www.flipkart.com/pbros-5-pieces-10-amp-mini-blade-fuse-1-pcs-inline-holder-waterproof-line-electrical/p/itmeb1bac62dd289) |
 | XT60 connector pair | 2 | 0.31 | Robocraze | in stock 16 Nov | [link](https://robocraze.com/products/xt60-connector-pair) |
-| Silicone wire 14 AWG, 1 m red + 1 m black | 1 | 1.28 | Robu | Robu per-metre price (66 + 56); stock not checked | [link](https://robu.in/product/high-quality-ultra-flexible-14awg-silicone-wire-red/) |
+| Silicone wire 14 AWG, 1 m red + 1 m black | 1 | 1.28 | Robu | Robu per-metre prices ($0.69 + $0.59); stock not checked | [link](https://robu.in/product/high-quality-ultra-flexible-14awg-silicone-wire-red/) |
 | Silicone wire 22 AWG, 5 m | 1 | 0.95 | Robu | Robu per-metre price ($0.19/m); stock not checked | [link](https://robu.in/product-category/batteries/wires-and-cables/silicone-wires/18-to-22-awg/) |
 | Velcro strap 25 mm (Bonzella, 5 m) | 1 | 3.15 | Amazon.in | listed 16 Nov 2026, not re-checked; price may change | [link](https://www.amazon.in/Bonzella-Adjustable-Organizer-Reusable-Securing/dp/B0FQWHWMJW) |
 | Nylon zip ties 200 mm (pack of 100) | 1 | 0.76 | Robu | listed 16 Nov 2026, not re-checked; price may change | [link](https://robu.in/product/nylon-cable-zip-ties-200-mm-white-100pcs/) |
