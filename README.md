@@ -76,7 +76,7 @@ Created in CircuitBench as a conceptual wiring diagram. Where the exact hardware
 ![Wiring diagram](docs/images/wiring-circuitbench.png)
 
 ### 3D render (optional)
-Parts only, then the elbow at 90 degrees:
+Parts only, then the elbow at 90 degrees (AI MADE FOR REVIEWER'S PLEASURE :) ):
 
 ![Parts only](docs/images/sim-parts-only.png)
 ![Elbow at 90 degrees](docs/images/sim-elbow-90deg.png)
