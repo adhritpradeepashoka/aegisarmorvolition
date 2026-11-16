@@ -55,8 +55,6 @@ Parts only, then the elbow at 90 degrees:
   [![SG90 desk demo still](docs/images/sg90-desk-demo-still.png)](docs/media/sg90-desk-demo.mp4)
 
   What it shows: the printed elbow replica (0.4x mini test parts) being swung by an SG90 servo, driven from a small servo tester. What it is not: the full-size DS51150 arm, and nothing is worn or powered on a person. The EMG garment is not in this clip.
-- Full demo video: TODO (link)
-- Photos of the final product: TODO (add to `journal/` and link here)
 
 ## Repository layout
 
