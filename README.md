@@ -61,7 +61,6 @@ Parts only, then the elbow at 90 degrees:
 
 | Folder | What goes there |
 |---|---|
-| `cad/` | **Your own** Tinkercad / FreeCAD design files and exports (the files Fallen reviews). |
 | `firmware/` | Code for the servo controller (torque limit, current limit, kill switch). |
 | `journal/` | Photos and notes that go with your Fallen journal entries. |
 | `docs/` | Design notes, safety notes, measurements. |
