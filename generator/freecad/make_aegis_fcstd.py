@@ -605,7 +605,6 @@ if __name__ == "__main__" or True:
     fb, _, _, lxb = forearm_bar(px_u)
     tray, lid = tray_parts()
     cl = chest_link(px_u)
-    torso, limbs = body_reference()
     parts = [
         (up, "01_upper_cuff_with_servo_cradle", "UpperCuff"),
         (elbow_relief(up), "01_upper_cuff_with_servo_cradle_ELBOW_RELIEF", "UpperCuffElbowRelief"),
@@ -624,8 +623,6 @@ if __name__ == "__main__" or True:
         (cl["strut"], "14_shoulder_strut", "ShoulderStrut"),
         (cl["block"], "15_gimbal_block", "GimbalBlock"),
         (cl["yoke"], "16_chest_yoke_arch", "ChestYokeArch"),
-        (torso, "17_BODY_REFERENCE_torso_not_printable", "TorsoReference"),
-        (limbs, "18_BODY_REFERENCE_arm_not_printable", "ArmReference"),
         (roll_rail(), "20_roll_rail", "RollRail"),
     ]
     only = os.environ.get("AEGIS_ONLY")

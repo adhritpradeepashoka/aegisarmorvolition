@@ -15,6 +15,4 @@
 14_shoulder_strut                                    features=  20 solids=1 valid=True vol=     44739.2 
 15_gimbal_block                                      features=   6 solids=1 valid=True vol=     29425.0 
 16_chest_yoke_arch                                   features=  33 solids=3 valid=True vol=    107921.8 
-17_BODY_REFERENCE_torso_not_printable                features=   1 solids=1 valid=True vol=  24147783.7 
-18_BODY_REFERENCE_arm_not_printable                  features=   4 solids=1 valid=True vol=   2678640.7 
 20_roll_rail                                         features=  14 solids=1 valid=True vol=      7647.6 
