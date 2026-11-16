@@ -8,7 +8,7 @@ A wearable system for the right arm: an **EMG sleeve** ("Black Carapace": steel-
 
 > **Status: early. Nothing here is a finished or tested design yet.**
 
-I've been passionate about brain-computer and body-computer interfaces for a long time, and I'm a fan of Warhammer 40k, especially its tech. The Black Carapace, the interface space marines use to control their power armor, is the thing I've most wanted to build my own version of. It's a project I kept putting off, and Fallen gave me the push to start. This is my version: a tight full-sleeved shirt with steel-thread electrodes that reads my muscle signals (Black Carapace), driving a servo elbow exoskeleton for my right arm (Aegis).
+I've been passionate about brain-computer and body-computer interfaces for a long time, and I'm a (secretive) fan of Warhammer 40k, especially its tech. The Black Carapace, the interface space marines use to control their power armor, is the thing I've most wanted to build my own version of. It's a project I kept putting off, and Fallen gave me the push to start. This is my version: a tight full-sleeved shirt with steel-thread electrodes that reads my muscle signals (Black Carapace), driving a servo elbow exoskeleton for my right arm (Aegis).
 
 ## What it is and how to use it
 
