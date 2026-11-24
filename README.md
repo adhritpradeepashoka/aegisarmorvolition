@@ -4,7 +4,7 @@ Hack Club **Fallen** submission by Adhrit Pradeep (Hack Club: adhrit2012).
 
 ## Bill of materials
 
-Full file: [`bom.csv`](bom.csv). Prices are shown in US dollars and in Indian rupees (INR), as listed on 16 Nov 2026; the dollar figures are converted at about 95 INR per USD (only a few were read from the live product page, so re-check before buying); "est." means an estimate, not looked up. Notes and old sources are in [`docs/bom-notes.md`](docs/bom-notes.md).
+Full file: [`bom.csv`](bom.csv). Prices are shown in US dollars and in Indian rupees (INR), as listed on 16 Nov 2026; the dollar figures are converted at about 95 INR per USD (only a few were read from the live product page, so re-check before buying - note to review); "est." means an estimate, not looked up. Notes and old sources are in [`docs/bom-notes.md`](docs/bom-notes.md).
 
 <!-- BOM:START -->
 | Item | Qty | USD each | INR each | Store | Status | Link |
